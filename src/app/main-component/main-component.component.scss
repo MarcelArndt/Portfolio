@@ -1,0 +1,21 @@
+.MainWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ContentWrapper{
+    position: relative;
+    width: 75%;
+    max-width: 1440px;
+
+}
+
+.WhiteBackgreound{
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    background-color: #E1E4E8;
+}

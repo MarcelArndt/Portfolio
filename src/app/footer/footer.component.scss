@@ -1,0 +1,118 @@
+
+footer{
+    position: relative;
+}
+
+
+.footerShape{
+    z-index: 99;
+    position: absolute;
+    bottom: 133px;
+    left: 316px;
+}
+
+.footerWrapper{
+    overflow: hidden;
+}
+
+.footerContent{
+    position: relative;
+    min-height: 240px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footerBubbleWrapper{
+    z-index: -5;
+    position: relative;
+    background-color: aqua;
+}
+
+.footerbackgound{
+    background-color: #85E8DD;
+}
+
+.footerBubble{
+
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+}
+
+.footerContent{
+    padding: 0px 60px 0px 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerLogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.footerLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    ul{
+        list-style: none;
+        display: flex;
+
+        li{
+            margin-right: 10px;
+        }
+
+        a{
+            margin-left: 32px;
+    
+            &:hover{
+                cursor: pointer;
+                filter: brightness(0) saturate(100%) invert(12%) sepia(99%) saturate(6818%) hue-rotate(273deg) brightness(93%) contrast(104%);
+            }
+        }
+    }
+  
+}
+
+.footerNav{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    ul{
+        position: absolute;
+        top: 171px;
+        display: flex;
+        list-style: none;  
+        li{
+            font-size: 18px;
+
+            &:hover{
+                color: #7E0EEE;
+            }
+        }
+        a{
+            text-decoration: none;
+            margin: 0 24px;
+
+            &:hover{
+                color: #7E0EEE;
+            }
+        }
+    }
+    p{
+        text-wrap: nowrap;
+        padding-top: 23px;
+        font-size: 24px;
+        color: white;
+    }
+}
+
+.shapePosition{
+    bottom: 0px;
+  }

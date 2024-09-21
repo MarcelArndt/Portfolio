@@ -1,0 +1,21 @@
+<section class="AbouMeSection" id="aboutMe">
+    <div class="shape shape-above"><img src="./assets/img/aboutme/shape-above.png"></div>
+    <div class="bubble top right"><img src="./assets/img/aboutme/hero-right-bubble-violet.png"></div>
+    <div class="bubble aboutMeBubleLeft left"><img src="./assets/img/aboutme/hero-left-bubble-cyan.png"></div>
+    <div class="profilPicture"><img src="./assets/img/aboutme/person.png"></div>
+    <div class="AboutMeWrapper">
+        <h3>About Me</h3>
+        <div id="AboutMeText" [ngClass]="animationClass">{{displayTextBox}}</div>
+        <nav class="AboutMeMenuBar">
+            <ul>
+                <li [ngClass]="{'active': activeTextBoxIndex === 0}"><img (click)="enbaleTextBox(0)" src="./assets/img/aboutme/nav/me-icon.svg"></li>
+                <li [ngClass]="{'active': activeTextBoxIndex === 1}"><img (click)="enbaleTextBox(1)" src="./assets/img/aboutme/nav/location-icon.svg"></li>
+                <li [ngClass]="{'active': activeTextBoxIndex === 2}"><img (click)="enbaleTextBox(2)" src="./assets/img/aboutme/nav/lamp-icon.svg"></li>
+                <li [ngClass]="{'active': activeTextBoxIndex === 3}"><img (click)="enbaleTextBox(3)" src="./assets/img/aboutme/nav/puzzle-icon.svg"></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+
+
