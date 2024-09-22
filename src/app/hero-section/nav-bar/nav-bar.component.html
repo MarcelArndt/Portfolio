@@ -7,7 +7,14 @@
                 <a href="#skills"><li>Skills</li></a>
                 <a href="#portfolio"><li>Projects</li></a>
                 <a href="#contact"><li>Contact</li></a>
-                <a><li><img src="./assets/img/hero/switch-color.svg"></li></a>
+                <li class="colorSwitchButton" (click)="toggleColorNav()"><img src="./assets/img/hero/switch-color.svg"><div class="hiddenSwitch" [ngClass]="hideNavigation  ? 'disable' : 'enable'"><div class="shape"></div><div class="boardwalk" [ngClass]="isColorNavOn  ? 'animationfadeIn' : 'animationfadeOut'">
+                    <nav class="colornav" [ngClass]="isColorNavOn  ? 'animationshowMenu' : 'animationhideMenu'">
+                    <div (click)="switchToBlueTheme()" class="blue active">
+                    </div>
+                    <div (click)="switchToOrangeTheme()" class="orange">
+                    </div>
+                    </nav>
+                </div></div></li>
                 <a><li><img src="./assets/img/hero/german-icon.svg"></li></a>
             </ul>
         </nav>

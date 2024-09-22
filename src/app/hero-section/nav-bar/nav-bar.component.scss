@@ -1,3 +1,5 @@
+
+
 .NavbarWrapper{
     position: absolute;
     display: flex;
@@ -9,6 +11,178 @@
     left: 0;
 }
 
+.colorSwitchButton{
+    position: relative;
+}
+
+
+
+.hiddenSwitch{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 7px;
+
+    .boardwalk{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 43px;
+        width: 100%;
+        max-width: 43px;
+        background-color: #040a2e;
+
+        height: 72px;
+        opacity: 1;
+
+        &::before{
+            z-index: -1;
+            content: "";
+            position: absolute;
+            bottom: -19px;
+            height: 21px;
+            width: 43px;
+            background-color: #040a2e;
+            border-radius: 0px 0px 50px 50px;
+        }
+
+        .colornav{
+            z-index: 99;
+            padding-top: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            opacity: 1;
+        
+            .blue{
+                z-index: 99;
+                height: 24px;
+                aspect-ratio: 1/1;
+                background-color: #60B0E4;
+                border-radius: 50%;
+                border: 3px solid white;
+            }
+        
+            .orange{
+                z-index: 99;
+                height: 24px;
+                aspect-ratio: 1/1;
+                background-color: #EE790E;
+                border-radius: 50%;
+                border: 3px solid white;
+            }
+
+            .active{
+                border: 3px solid #ffffff;
+            }
+
+            div{
+                &:hover{
+                    cursor: pointer;
+                    border: 3px solid #7E0EEE;
+                }
+
+            }
+        }
+    }
+
+    .animationshowMenu{
+        animation: showMenu 0.35s ease-in-out;
+        opacity: 1;
+    }
+
+    .animationhideMenu{
+        animation: hideMenu 0.35s ease-in-out;
+        opacity: 0 !important;
+    }
+
+    .animationfadeIn{
+        animation: growingNav 0.35s ease-in-out;
+        height: 72px ;
+        opacity: 1 ;
+    }
+    
+    .animationfadeOut{
+        animation: shrinkingNav 0.35s ease-in-out;
+        height: 0px ;
+    }
+
+    .shape{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        max-width: 43px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        box-shadow: 0px 10px 0 0 #040a2e;;
+            &::before{
+            content: "";
+            position: absolute;
+            top:8px;
+            width: 100%;
+            max-width: 43px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            box-shadow: 0px 10px 0 0 #040a2e;;
+       }
+    }
+}
+
+.disable{
+    display: none;
+}
+
+.enable{
+    display: flex;
+}
+
+
+@keyframes hideMenu {
+    0%{
+        opacity: 1;
+    }
+    
+    25% {
+        opacity: 0;
+    }
+}
+
+@keyframes showMenu {
+    0%{
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes growingNav{
+    0%{
+        height: 12px;
+    }
+
+    100% {
+        height: 74px;
+    }
+}
+
+@keyframes shrinkingNav{
+    0%{
+        height: 74px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
 
 .Navbar{
     display: flex;
@@ -18,10 +192,9 @@
     width: 75%;
 
     .MainNavBar{
-
+        z-index: 399;
         ul{
             font-size: 21px;
-           
             display: flex;
             align-items: center;
             list-style: none;
