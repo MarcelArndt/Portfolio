@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .AbouMeSection{
     position: relative;
     padding-top: 96px;
@@ -28,7 +30,7 @@
 
 .AboutMeWrapper{
     position: relative;
-    font-size: 24px;
+    font-size: $baseFontSize;
     font-weight: 100;
     margin-top: 3%;
     margin-left: 15%;

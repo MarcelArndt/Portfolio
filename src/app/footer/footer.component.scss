@@ -1,3 +1,4 @@
+@import '../../styles.scss';
 
 footer{
     position: relative;
@@ -90,10 +91,10 @@ footer{
         display: flex;
         list-style: none;  
         li{
-            font-size: 18px;
+            font-size: clamp(14px, 2vw, 18px);
 
             &:hover{
-                color: #7E0EEE;
+                color: $violet;
             }
         }
         a{
@@ -101,14 +102,14 @@ footer{
             margin: 0 24px;
 
             &:hover{
-                color: #7E0EEE;
+                color: $violet;
             }
         }
     }
     p{
         text-wrap: nowrap;
         padding-top: 23px;
-        font-size: 24px;
+        font-size: clamp(18px, 3vw,24px);
         color: white;
     }
 }

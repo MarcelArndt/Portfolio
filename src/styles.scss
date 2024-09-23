@@ -1,3 +1,7 @@
+$baseFontSize: clamp(18px, 2vw, 24px);
+$baseTextColor:  #00095B;
+$violet: #7E0EEE;
+
 @font-face {
     font-family: "Outfit";
     src: url("../public/assets/font/Outfit-VariableFont_wght.ttf") format("truetype");
@@ -13,7 +17,7 @@
     margin: 0px;
     font-family: "Outfit";
     font-weight: 350;
-    color: #00095B;
+    color: $baseTextColor;
 }
 
 ul{
@@ -28,9 +32,9 @@ body{
 
 h1{
   line-height: 126%;
-  font-size: 112px;
+  font-size: clamp(48px, 8vw, 112px);
   letter-spacing: 2px;
-  color: #7E0EEE;
+  color: $violet;
   font-weight:600;
   text-transform: capitalize;
 }
@@ -38,8 +42,8 @@ h1{
 h2{
   line-height: 126%;
   margin-top: 16px;
-  font-size: 40px;
-  color: #00095B;
+  font-size: clamp(21px, 3vw, 40px);
+  color: $baseTextColor;
   font-weight:300;
   text-transform: uppercase;
 }
@@ -47,15 +51,15 @@ h2{
 h3{
   line-height: 126%;
   margin-top: 16px;
-  font-size: 56px;
+  font-size: clamp(32px, 4vw, 56px);
   letter-spacing: 3px;
-  color: #7E0EEE;
+  color: $violet;
   font-weight:bold;
   margin-bottom: 16px;
 }
 
 h4{
-  font-size: 28px;
+  font-size: clamp(24px, 4vw, 28px);
   margin-block-start: 0px;
   margin-block-end: 0px;
 
@@ -99,7 +103,7 @@ h4{
 }
 
 .TextViolet{
-  color: #7E0EEE;
+  color: $violet;
 }
 
 .button{
@@ -109,7 +113,7 @@ h4{
   text-wrap: nowrap;
   justify-content: center;
   z-index: 300;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 21px);
   font-weight: 650;
   color: white;
   max-width: max-content;
@@ -123,26 +127,26 @@ h4{
 }
 
 .outlineButton{
-  border: 3px solid #00095B;;
-  color: #00095B;
+  border: 3px solid $baseTextColor;
+  color: $baseTextColor;
   &:hover{
-    border: 3px solid #7E0EEE;
-    color: #7E0EEE;
+    border: 3px solid $violet;
+    color: $violet;
   }
 }
 
 
 .colorViolet{
-  background-color: #7E0EEE;
+  background-color: $violet;
   &:hover{
     background-color: white;
-    border: 3px solid #7E0EEE;
-    color: #7E0EEE;
+    border: 3px solid $violet;
+    color: $violet;
   }
 }
 
 .whiteText{
-  font-size: 24px;
+  font-size: $baseFontSize;
   color: white;
 }
 
@@ -198,7 +202,7 @@ hr{
   &::before{
     position: absolute;
     content: "";
-    background-color: #7E0EEE;
+    background-color: $violet;
     width: 2px;
     left: 50%;
     right: 50%;
@@ -213,7 +217,7 @@ hr{
 }
 
 .color{
-  color: #7E0EEE;
+  color: $violet;
 }
 
 @media (max-width: 1000px){

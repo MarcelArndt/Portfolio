@@ -1,4 +1,4 @@
-
+@import '../../../styles.scss';
 
 .NavbarWrapper{
     position: absolute;
@@ -194,7 +194,7 @@
     .MainNavBar{
         z-index: 399;
         ul{
-            font-size: 21px;
+            font-size: clamp(16px, 2vw, 21px);
             display: flex;
             align-items: center;
             list-style: none;
@@ -219,7 +219,7 @@
             }
 
             li:hover{
-             color: #7E0EEE;
+             color: $violet;
             }
 
             img:hover{
