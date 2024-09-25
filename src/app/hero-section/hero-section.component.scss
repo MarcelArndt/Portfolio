@@ -13,7 +13,7 @@
 }
 
 .hero-part-left{
-    z-index: -3;
+    z-index: 3;
     opacity: 0.6;
     position: absolute;
     left: 0px;
@@ -22,7 +22,7 @@
 }
 
 .hero-part-right{
-    z-index: -3;
+    z-index: 3;
     opacity: 0.6;
     position: absolute;
     right: 0px;
@@ -71,6 +71,7 @@ margin-bottom: 64px;
 }
 
 .IconBar{
+  z-index: 99;
   width: 75%;
   ul{
     margin-block-start: 0em;

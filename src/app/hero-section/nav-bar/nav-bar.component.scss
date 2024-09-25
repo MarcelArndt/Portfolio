@@ -185,6 +185,7 @@
 
 
 .Navbar{
+
     display: flex;
     justify-content: space-between;
     height: 56px;
@@ -192,8 +193,8 @@
     width: 75%;
 
     .MainNavBar{
-        z-index: 399;
         ul{
+            z-index: 99;
             font-size: clamp(16px, 2vw, 21px);
             display: flex;
             align-items: center;

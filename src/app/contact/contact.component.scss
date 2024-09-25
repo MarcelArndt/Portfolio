@@ -1,5 +1,6 @@
 @import '../../styles.scss';
 
+
 .contact{
     overflow: hidden;
     padding-bottom: 140px;
@@ -26,8 +27,12 @@
 
 .contactWrapper{
     width: 75%;
+    height: 100%;
+}
+
+.contactColumns{
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;    
 }
 
 .contentContactwrapper{
@@ -109,7 +114,7 @@
 
 
     .bubble-bottom{
-        bottom: 237px;
+        bottom: 0px;
         z-index: -1;
     }
 

@@ -1,8 +1,13 @@
 @import '../../styles.scss';
 
+.blueBG{
+    background-color: #85E8DD;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
 .skillMainWrapper{
-    max-height: 650px;
-    height: 100%;
     width: 100%;
     position: relative;
 }
@@ -22,6 +27,7 @@
 }
 
 .SkillsContentWrapper{
+    z-index: 99;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -32,27 +38,30 @@
     top: 0px;
     width: 100%;
     overflow: hidden;
-    z-index: -1;
+    z-index: 10;
     height: 100%;
     position: absolute;
 }
 
 .TextWrapper{
+    z-index: 99;
     margin-right: 190px;
     width: 55%;
     margin-top: calc(109px - 47px);
     max-width: 572px;
+
     p{
         margin-bottom: 42px;
     }
+    
 }
 
 .skillsLogoWrapper{
+    z-index: 99;
     margin-left: 190px;
     max-width: 405px;
     width: 30%;
     ul{
-
         margin-block-start: 0px;
         margin-block-end: 0px;
         padding-inline-start: 0px;
@@ -128,9 +137,8 @@
 }
 
 @media (max-width: 1149px) {
-    .skillMainWrapper{
-        max-height: 750px;
-    }
+
+
 }
 
 @media (max-width: 1300px) {
@@ -143,8 +151,13 @@
 
 @media (max-width: 1200px) {
 
-    .skillMainWrapper{
-        max-height: 1000px; 
+    .blueBG{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .skillsLogoWrapper{
@@ -210,11 +223,6 @@
         max-width: 700px;
     }
 
-    .skillMainWrapper{
-        height: 100%;
-        max-height: 1500px;
-    }
-
 }
 
 @media (max-width: 606px) {
@@ -224,4 +232,8 @@
         max-width: 1440px;
     }
 
+}
+
+.bottom{
+    bottom: -3px;
 }
