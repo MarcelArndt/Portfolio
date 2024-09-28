@@ -1,6 +1,7 @@
 $baseFontSize: clamp(21px, 2vw, 24px);
 $baseTextColor:  #00095B;
 $violet: #7E0EEE;
+$orange: #EE790E;
 
 @font-face {
     font-family: "Outfit";
@@ -31,6 +32,7 @@ body{
 }
 
 h1{
+  z-index: 98;
   line-height: 126%;
   font-size: clamp(48px, 8vw, 112px);
   letter-spacing: 2px;
@@ -219,4 +221,103 @@ hr{
 }
 
 @media (max-width: 1000px){
+}
+
+.orangeHover{
+  &:hover{
+    color: $orange;
+  }
+}
+
+.orangeDarkText {
+  color: #360303;
+}
+
+.orangeDarkFilter {
+  filter: brightness(0) saturate(100%) invert(7%) sepia(90%) saturate(1439%) hue-rotate(337deg) brightness(97%) contrast(109%) !important;
+  &:hover{
+    filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+  }
+}
+
+.orangeBox-Shadow{
+  box-shadow: 0px 10px 0 0 #360303 !important;
+  &::before{
+    content: "";
+    position: absolute;
+    top:8px;
+    width: 100%;
+    max-width: 43px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0px 10px 0 0 #360303 !important;
+
+  }
+}
+
+.orangeBefore{
+    &::before{
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #360303 !important;
+  }
+}
+
+.orangeDarkBackground{
+  background-color: #360303 !important;
+
+  &::before{
+    background-color: #360303 !important;
+  }
+  &::after{
+    background-color: #360303 !important;
+  }
+}
+
+.MenuOrange{
+  .boardwalk{
+    background-color: #360303 !important;
+
+    &::before{
+      background-color: #360303 !important;
+    }
+  }
+}
+
+.orangeColor{
+  color: $orange;
+}
+
+.orangeLink{
+  color: #360303;
+  &:hover{
+    color: $orange !important;
+  }
+
+  li{
+    color: #360303;
+    &:hover{
+      color: $orange !important;
+    }
+  }
+}
+
+.backgroundOrange {
+  background-color: $orange;
+}
+
+.filterToOrange {
+  filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+
+  &:hover{
+    filter: brightness(1000)  invert(0) sepia(73%) saturate(0) hue-rotate(0) brightness(100%) contrast(100%) !important;
+  }
+}
+
+.orangeButtonHover{
+  &:hover{
+    background-color: white;
+    border: 3px solid $orange;
+    color: $orange;
+  }
 }

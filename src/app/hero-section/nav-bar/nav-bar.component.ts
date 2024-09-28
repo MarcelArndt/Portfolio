@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
+import { ColorSwapService } from '../../color-swap.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,8 +8,12 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
+  
 })
 export class NavBarComponent {
+  constructor(public ThemeColor: ColorSwapService, private renderer: Renderer2){
+  }
+
   isColorNavOn = false;
   hideNavigation = true;
   blueColorTheme = true;
@@ -63,12 +68,21 @@ export class NavBarComponent {
   }
 
   switchToOrangeTheme(){
-    this.blueColorTheme = false;
-    console.log(this.blueColorTheme);
+    this.ThemeColor.currentColorIsBlue = false;
+    this.setBodyBackground();
   }
 
   switchToBlueTheme(){
-    this.blueColorTheme = true;
-    console.log(this.blueColorTheme);
+    this.ThemeColor.currentColorIsBlue = true;
+    this.setBodyBackground();
   }
+
+  setBodyBackground(){
+    if(this.ThemeColor.currentColorIsBlue){
+      this.renderer.setStyle(document.body, 'background-color', '#040a2e');
+    } else {
+      this.renderer.setStyle(document.body, 'background-color', '#2d0804');
+    }
+  }
+
 }

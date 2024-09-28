@@ -166,25 +166,46 @@
 }
 
 .hideMobilMenu{ 
+    z-index: 100;
     user-select: none;
     width: 175px;
     position: absolute;
     top: calc(43px + 16px);
-    left: -62px;
+    left: -66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     ul{
+        z-index: 100;
         user-select: none;
         backdrop-filter: blur(10px);
         border-radius: 12px;
         padding: 8px 16px 8px 16px;
         background:#040a2e;
+
+        a{
+            z-index: 100;
+        }
        
         li{
+            z-index: 100;
             user-select: none;
             font-size: 18px;
             margin: 8px 0px 8px 0px;
             color: white;
         }
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: -10px;
+        width: 0px;
+        height: 0px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #040a2e;;
     }
 }
 
@@ -195,12 +216,14 @@
 
 .enable{
     display: flex;
+    z-index: 100;
 }
 
 .growMobilMenu{
     animation: growingMobilNav 0.35s ease-in-out;
     opacity: 1 !important;
     height: auto ;
+    z-index: 100;
     li{
          animation: showMenu 0.35s ease-in-out;
     }
@@ -268,7 +291,7 @@
         opacity: 1;
     }
 
-    85%{
+    50%{
         opacity: 1;
     }
 
@@ -326,6 +349,9 @@
                 position: relative;
                 z-index: 99;
                 user-select: none;
+                &:hover{
+                    cursor: pointer;
+                }
             }
 
             li{
