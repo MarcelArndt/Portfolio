@@ -2,11 +2,24 @@
     <div class="Navbar">
         <div class="logo"><a href="#start"><img src="./assets/img/logo.svg"></a></div>
         <nav class="MainNavBar">
-            <ul>
-                <a href="#aboutMe"><li>About Me</li></a>
-                <a href="#skills"><li>Skills</li></a>
-                <a href="#portfolio"><li>Projects</li></a>
-                <a href="#contact"><li>Contact</li></a>
+            <ul class="mainNav">
+                <a class="bigScreen" href="#aboutMe"><li>About Me</li></a>
+                <a class="bigScreen" href="#skills"><li>Skills</li></a>
+                <a class="bigScreen" href="#portfolio"><li>Projects</li></a>
+                <a class="bigScreen" href="#contact"><li >Contact</li></a>
+                <li>
+                    <nav class="mobilNav">
+                    <div><img (click)="toogleMobilNav()" src="./assets/img/mobil-menu.svg"></div>
+                    <div class="hideMobilMenu" [ngClass]="setMobilOff ? 'disable' : 'enable'">
+                        <ul [ngClass]="hideMobilNavigation ? 'shrinkMobilMenu' : 'growMobilMenu'">
+                            <a href="#aboutMe"><li>About Me</li></a>
+                            <a href="#skills"><li>Skills</li></a>
+                            <a href="#portfolio"><li>Projects</li></a>
+                            <a href="#contact"><li>Contact</li></a>
+                        </ul>
+                    </div>
+                </nav>
+                </li>
                 <li class="colorSwitchButton" (click)="toggleColorNav()"><img src="./assets/img/hero/switch-color.svg"><div class="hiddenSwitch" [ngClass]="hideNavigation  ? 'disable' : 'enable'"><div class="shape"></div><div class="boardwalk" [ngClass]="isColorNavOn  ? 'animationfadeIn' : 'animationfadeOut'">
                     <nav class="colornav" [ngClass]="isColorNavOn  ? 'animationshowMenu' : 'animationhideMenu'">
                     <div (click)="switchToBlueTheme()" class="blue active">

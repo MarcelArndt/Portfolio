@@ -79,6 +79,7 @@
             position: relative;
 
             &:hover div{
+                user-select: none;
                 position: absolute;
                 transform: translateY(-52px);
                 opacity: 1;
@@ -203,15 +204,15 @@
         margin-top: 0px;
         text-align: center;
         max-width: 1440px;
-        width: 75%;
+        width: 57%;
         margin-right: 0px;
         display: flex;
         justify-self: center;
         flex-direction: column;
         align-items: center;
+
         a{
             display: block;
-
         }
     }
 }
@@ -235,5 +236,5 @@
 }
 
 .bottom{
-    bottom: -3px;
+    bottom: 0px;
 }

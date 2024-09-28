@@ -1,15 +1,30 @@
 @import '../../styles.scss';
 
-footer{
+.footer{
     position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: calc(100%);
+        height: 55px;;
+        width: 100%;
+        left: 0px;
+        top: -55px;
+        z-index: 98;
+        background-color: #85E8DD;
+        background: rgb(24,2,31);
+        background: linear-gradient(360deg, rgba(4, 11, 74, 0.5) 0%, rgba(12, 2, 31, 0) 100%);
+      }
+
 }
 
 
 .footerShape{
     z-index: 99;
     position: absolute;
-    bottom: 133px;
-    left: 316px;
+    bottom: 170px;
+    left: 19vw;
 }
 
 .footerWrapper{
@@ -17,6 +32,8 @@ footer{
 }
 
 .footerContent{
+    z-index: 99;
+    height: 100%;
     position: relative;
     min-height: 240px;
     display: flex;
@@ -24,9 +41,8 @@ footer{
 }
 
 .footerBubbleWrapper{
-    z-index: -5;
+    z-index: 3;
     position: relative;
-    background-color: aqua;
 }
 
 .footerbackgound{
@@ -34,7 +50,6 @@ footer{
 }
 
 .footerBubble{
-
     position: absolute;
     top: 0px;
     z-index: 3;
