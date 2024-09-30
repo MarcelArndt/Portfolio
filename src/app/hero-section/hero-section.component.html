@@ -5,8 +5,8 @@
     <div class="shape right"><img src="./assets/img/hero/Shape-right.png"></div>
     <div class="hero-part-left"><img src="./assets/img/hero/hero_background-part-left.png"></div>
     <div class="hero-part-right"><img src="./assets/img/hero/hero_background-part-right.png"></div>
-    <div class="bubble top right"><img src="./assets/img/hero/hero-left-bubble-cyan.png"></div>
-    <div class="bubble top left"><img src="./assets/img/hero/hero-top-bubble-violet.png"></div>
+    <div class="bubble top right" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/hero/hero-left-bubble-cyan.png"></div>
+    <div class="bubble top left" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/hero/hero-top-bubble-violet.png"></div>
 
     <div class="HeroWrapper">
         <h1 [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeColor'">Crafting seamless<br>digital experiences.</h1>

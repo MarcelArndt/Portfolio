@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ColorSwapService } from '../color-swap.service';
 
 @Component({
   selector: 'app-about-me',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
 
 })
 export class AboutMeComponent {
-
+  constructor(public ThemeColor: ColorSwapService){}
   text:string[] = [
     "Hi, I’m a german speaking Frontend Developer based near Munich. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
     "Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.",

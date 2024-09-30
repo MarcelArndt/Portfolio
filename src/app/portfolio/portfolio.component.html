@@ -1,12 +1,12 @@
 <section class="portfolio" id="portfolio">
-    <div class="bubble top set_index"><img src="./assets/img/portfolio/bubble-top.png"></div>
-    <div class="bubble left set_index"><img src="./assets/img/portfolio/bubble-two.png"></div>
-    <div class="bubble right set_index bubble_three"><img src="./assets/img/portfolio/bubble-three.png"></div>
-    <div class="bubble bottom left set_index bubble_four"><img src="./assets/img/portfolio/bubble-bottom.png"></div>
+    <div class="bubble top set_index" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/portfolio/bubble-top.png"></div>
+    <div class="bubble left set_index" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/portfolio/bubble-two.png"></div>
+    <div class="bubble right set_index bubble_three" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/portfolio/bubble-three.png"></div>
+    <div class="bubble bottom left set_index bubble_four" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/portfolio/bubble-bottom.png"></div>
     <div class="portfolioWrapper set_infront">
         <div class="headlineWrapper">
-            <h3>Portfolio</h3>
-            <p>Explore a selection of my work here - Interact<br>with projects to see my skills in action.</p>
+            <h3 [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}">Portfolio</h3>
+            <p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}">Explore a selection of my work here - Interact<br>with projects to see my skills in action.</p>
         </div>
 
         <div class="projectWrapper">
@@ -16,7 +16,7 @@
                 <img src="./assets/img/portfolio/project-1.png">
                 <img class="position_one" src="./assets/img/portfolio/shape-project-1.png">
             </div> 
-            <div class="projectText">
+            <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}">
                 <h5>Project Join</h5>
                 <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</p>
                 <span>JavaScript | HTML | CSS</span>
@@ -32,7 +32,7 @@
                 <img src="./assets/img/portfolio/project-2.png">
                 <img class="position_two" src="./assets/img/portfolio/shape-project-2.png">
             </div> 
-            <div class="projectText">
+            <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}">
                 <h5>Phantom Forest</h5>
                 <p>A simple Jump-and-Run game based on an object-oriented approach. Help your Hero to fight against any Evil in the nearest forest.</p>
                 <span>JavaScript | HTML | CSS</span>
@@ -48,7 +48,7 @@
                 <img src="./assets/img/portfolio/project-3.png">
                 <img class="position_three" src="./assets/img/portfolio/shape-project-3.png">
             </div> 
-            <div class="projectText">
+            <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}">
                 <h5>Pokédex</h5>
                 <p>Based on the PokéAPI - A simple library that provides and catalogues pokemon information.</p>
                 <span>JavaScript | HTML | CSS | API</span>

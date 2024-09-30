@@ -81,7 +81,7 @@ export class NavBarComponent {
     if(this.ThemeColor.currentColorIsBlue){
       this.renderer.setStyle(document.body, 'background-color', '#040a2e');
     } else {
-      this.renderer.setStyle(document.body, 'background-color', '#2d0804');
+      this.renderer.setStyle(document.body, 'background-color', '#160302');
     }
   }
 

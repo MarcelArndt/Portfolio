@@ -2,7 +2,7 @@
     <div class="shape bottom right bubble-bottom"><img src="./assets/img/contact/bubble-bottom-right.png"></div>
     <div class="contentContactwrapper">
         <div class="contactWrapper">
-            <div class="contactColumns">
+            <div class="contactColumns" [ngClass]="{'orangeContact': !ThemeColor.currentColorIsBlue}">
                 <div class="contactDescription">
                     <h3>Contact</h3>
                     <p><span class="bold">Got a problem to solve?</span><br>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.

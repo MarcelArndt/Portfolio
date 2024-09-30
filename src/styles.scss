@@ -230,7 +230,7 @@ hr{
 }
 
 .orangeDarkText {
-  color: #360303;
+  color: #360303 !important;
 }
 
 .orangeDarkFilter {
@@ -320,4 +320,75 @@ hr{
     border: 3px solid $orange;
     color: $orange;
   }
+}
+
+.orangeIconButtenAboutMe{
+  ul{
+    li{
+      img{
+        filter: brightness(0) saturate(100%) invert(43%) sepia(3%) saturate(4564%) hue-rotate(314deg) brightness(94%) contrast(90%) !important;
+      }
+      &:hover{
+        filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+      }
+    }
+    .active{
+      filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+    }
+  }
+}
+
+.yellowBackground{
+  background-color: #EEB45E !important;
+}
+
+
+.orangeHoverEffektSkills{
+  ul{
+    li{
+      &:hover img{
+        filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+    }
+      div{
+        background-color: #EE790E !important;
+        &::after{
+          filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+        }
+      }
+    }
+  }
+}
+
+.filterToYellow{
+  img{
+    filter: brightness(0) saturate(100%) invert(86%) sepia(34%) saturate(421%) hue-rotate(5deg) brightness(100%) contrast(90%) !important;
+  }
+}
+
+.filterToBrightYellow{
+  img{
+    filter: brightness(0) saturate(100%) invert(93%) sepia(83%) saturate(526%) hue-rotate(341deg) brightness(98%) contrast(91%) !important;
+  }
+}
+  
+.filterToPinkRed{
+  img{
+    filter: saturate(90%) invert(50%) sepia(76%) saturate(700%) hue-rotate(310deg) brightness(150%) contrast(100%) !important;
+  }
+}
+
+.filterToDeepOrange{
+  img{
+    filter: brightness(0) saturate(100%) invert(49%) sepia(81%) saturate(2618%) hue-rotate(340deg) brightness(94%) contrast(90%) !important;
+  }
+}
+
+.filterToCyan{
+  img{
+    filter: brightness(0) saturate(100%) invert(83%) sepia(21%) saturate(647%) hue-rotate(124deg) brightness(98%) contrast(91%) !important;
+  }
+}
+
+.wrapperOrangeTheme{
+  background-color: #E8E1E1 !important;
 }

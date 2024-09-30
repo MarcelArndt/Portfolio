@@ -194,6 +194,39 @@
             }
         }
     }
+}
 
+.orangeProject{
+    h5{
+        color: $orange !important;
+    }
+    p{
+        color: #360303 !important;
+    }
 
+    span{
+        color: #D10000 !important;
+    }
+
+    .buttonContainer{
+        .colorViolet{
+            background-color: $orange !important;
+            border: 3px solid $orange !important;
+
+            &:hover{
+                color: $orange !important;
+                background-color: white !important;
+            }
+        }
+
+        .outlineButton{
+            border: 3px solid #360303 !important;
+            color: #360303 !important;
+
+            &:hover{
+                color: $orange !important;
+                border: 3px solid $orange !important;
+            }
+        }
+    } 
 }

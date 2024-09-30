@@ -64,11 +64,11 @@
         min-height: 230px;
         background-color: transparent;
     }
-
 }
 
+
+
 .contactDescription{
-    
     width: 100%;
     font-weight: 400;
     font-size: clamp(18px, 3vw, 24px);
@@ -83,6 +83,45 @@
         z-index: 99;
         margin-top: -16px;
     }
+}
+
+.orangeContact{
+    h3{
+        color: $orange !important;
+    }
+    p{
+        color: #360303 !important;
+        span{
+            color: #360303 !important;
+        }
+
+        .color{
+            color: $orange !important;
+        }
+    }
+
+    input{
+        color: #360303 !important; 
+        border: 2px solid  $orange !important;
+    }
+
+    textarea{
+        color: #360303 !important; 
+        border: 2px solid  $orange !important;
+    }
+
+    .colorViolet{
+        background-color: $orange !important;
+        color: white;
+        border: 3px solid $orange !important;
+
+        &:hover{
+            background-color: white !important;
+            color: $orange !important;
+            border: 3px solid $orange !important;
+        }
+    }
+
 }
 
 @media (max-width:1914px){
