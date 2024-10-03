@@ -1,16 +1,16 @@
 
-<div class="footer">
-    <div class="footerShape" ><img src="./assets/img/footer/shape.png"></div>
+<div class="footer footerbackgound" [ngClass]="{'yellowBackground': !ThemeColor.currentColorIsBlue}">
+    <div class="footerShape" ><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/footer/shape.png' : './assets/img/footer/shape-orange.png'"></div>
 
     <div class="footerWrapper">
     <div class="footerBubbleWrapper">
-        <div class="footerBubble right footerbackgound"><img src="./assets/img/footer/bubble-right.png"></div>
-        <div class="footerBubble left " ><img src="./assets/img/footer/bubble-left.png"></div>
+        <div class="footerBubble right" [ngClass]="{'filterToDeepOrange': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/footer/bubble-right.png"></div>
+        <div class="footerBubble left" [ngClass]="{'filterToBrightYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/footer/bubble-left.png"></div>
    
     </div>
     <div class="footerContent">
         <div class="footerLogo"><a href="#start"><img src="./assets/img/logo.svg"></a></div>
-            <nav class="footerNav">
+            <nav class="footerNav" [ngClass]="{'footerNavOrange': !ThemeColor.currentColorIsBlue}">
                 <p>© Marcel Arndt 2024</p>
                 <ul>
                     <a href="#start"><li>Startseite</li></a>
@@ -19,7 +19,7 @@
                 </ul>
             </nav>
 
-            <nav class="footerLinks">
+            <nav class="footerLinks" [ngClass]="{'footerIconsOrange': !ThemeColor.currentColorIsBlue}">
                 <ul >
                     <li><a href="https://github.com/MarcelArndt" target="_blank"><img src="./assets/img/github.svg"></a></li>
                     <a><li><img src="./assets/img/e_mail.svg"></li></a>

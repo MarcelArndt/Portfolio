@@ -132,3 +132,31 @@
 .shapePosition{
     bottom: 0px;
   }
+
+  .footerNavOrange{
+    ul{
+        a{
+            li{
+                color: #360303 !important;
+
+                &:hover{
+                    color: white !important;
+                }
+
+            }
+        }
+    }
+  }
+
+  .footerIconsOrange{
+    ul{
+        a{
+            filter: brightness(1000%) saturate(0%) invert(0%) sepia(0%) saturate(0%) hue-rotate(356deg) contrast(100%) !important;
+            
+            &:hover{
+                filter: brightness(0) saturate(100%) invert(7%) sepia(90%) saturate(1439%) hue-rotate(337deg) brightness(97%) contrast(109%) !important;
+            }
+            
+        }
+    }
+  }

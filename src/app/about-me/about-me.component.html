@@ -1,5 +1,5 @@
 <section class="AbouMeSection" id="aboutMe">
-    <div class="shape shape-above"><img src="./assets/img/aboutme/shape-above.png"></div>
+    <div class="shape shape-above"><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/aboutme/shape-above.png' : './assets/img/aboutme/shape-above-orange.png'"></div>
     <div class="bubble bottom right" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/hero-right-bubble-violet.png"></div>
     <div class="bubble aboutMeBubleLeft left" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/hero-left-bubble-cyan.png"></div>
     <div class="profilPicture"><img src="./assets/img/aboutme/person.png"></div>

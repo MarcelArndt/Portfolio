@@ -1,6 +1,6 @@
 <section class="skillMainWrapper" id="skills">
-        <div class="shape right skillsTransition"><img src="./assets/img/skills/shape-right.png"></div>
-        <div class="shape left shapeInside" ><img src="./assets/img/skills/shape-left.png"></div>
+        <div class="shape right skillsTransition"><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/skills/shape-right.png' : './assets/img/skills/shape-right-orange.png'"></div>
+        <div class="shape left shapeInside" ><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/skills/shape-left.png' : './assets/img/skills/shape-left-orange.png'"></div>
         <div class="blueBG" [ngClass]="{'yellowBackground': !ThemeColor.currentColorIsBlue}">
                 <div class="TextWrapper">
                         <h3 class="bigScreen" [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}">My Skills</h3>

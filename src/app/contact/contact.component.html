@@ -1,5 +1,5 @@
-<section class="contact" id="contact">
-    <div class="shape bottom right bubble-bottom"><img src="./assets/img/contact/bubble-bottom-right.png"></div>
+<div class="contact" id="contact">
+    <div class="bubble bottom right" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/contact/bubble-bottom-right.png"></div>
     <div class="contentContactwrapper">
         <div class="contactWrapper">
             <div class="contactColumns" [ngClass]="{'orangeContact': !ThemeColor.currentColorIsBlue}">
@@ -20,4 +20,4 @@
             </div>
         </div>
     </div>
-</section>
+</div>

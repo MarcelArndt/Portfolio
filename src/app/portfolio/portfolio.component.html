@@ -14,7 +14,7 @@
         <div class="projectContainer"> 
             <div class="projectPircture">
                 <img src="./assets/img/portfolio/project-1.png">
-                <img class="position_one" src="./assets/img/portfolio/shape-project-1.png">
+                <img class="position_one" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-1.png' : './assets/img/portfolio/shape-project-1-orange.png'">
             </div> 
             <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}">
                 <h5>Project Join</h5>
@@ -30,7 +30,7 @@
         <div class="projectContainer odd"> 
             <div class="projectPircture">
                 <img src="./assets/img/portfolio/project-2.png">
-                <img class="position_two" src="./assets/img/portfolio/shape-project-2.png">
+                <img class="position_two" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-2.png' : './assets/img/portfolio/shape-project-2-orange.png'">
             </div> 
             <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}">
                 <h5>Phantom Forest</h5>
@@ -46,7 +46,7 @@
         <div class="projectContainer"> 
             <div class="projectPircture">
                 <img src="./assets/img/portfolio/project-3.png">
-                <img class="position_three" src="./assets/img/portfolio/shape-project-3.png">
+                <img class="position_three" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-3.png' : './assets/img/portfolio/shape-project-3-orange.png'">
             </div> 
             <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}">
                 <h5>Pokédex</h5>

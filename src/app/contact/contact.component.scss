@@ -2,8 +2,13 @@
 
 
 .contact{
+    position: relative;
     overflow: hidden;
     padding-bottom: 140px;
+
+    .bottom{
+        bottom: -3px;
+    }
 }
 
 .bubble-bottom{
