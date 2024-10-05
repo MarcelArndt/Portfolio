@@ -1,8 +1,8 @@
 @import '../../styles.scss';
 
 .footer{
+    background-color: #85e8dd;
     position: relative;
-
     &::before{
         content: "";
         position: absolute;
@@ -12,53 +12,70 @@
         left: 0px;
         top: -55px;
         z-index: 98;
-        background-color: #85E8DD;
-        background: rgb(24,2,31);
         background: linear-gradient(360deg, rgba(4, 11, 74, 0.5) 0%, rgba(12, 2, 31, 0) 100%);
       }
+
+      .top{
+        top: 0px;
+        height: 100%;
+        img{
+            height: 100%;
+            object-fit: cover;
+            object-position: top
+        }
+      }
+
+      .bottom{
+        img{
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+      }
+
 
 }
 
 
 .footerShape{
-    z-index: 99;
+    z-index: 120;
     position: absolute;
-    bottom: 170px;
+    top: -130px;
     left: 19vw;
 }
 
 .footerWrapper{
     overflow: hidden;
-}
-
-.footerContent{
-    z-index: 99;
     height: 100%;
-    position: relative;
-    min-height: 240px;
-    display: flex;
-    flex-direction: row;
-}
 
-.footerBubbleWrapper{
-    z-index: 3;
-    position: relative;
-}
 
-.footerbackgound{
-    background-color: #85E8DD;
-}
-
-.footerBubble{
-    position: absolute;
-    top: 0px;
-    z-index: 3;
 }
 
 .footerContent{
+    overflow: hidden;
+    box-sizing: border-box;
     padding: 0px 60px 0px 60px;
     display: flex;
     justify-content: space-around;
+    z-index: 99;
+    height: 100%;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+
+    .footerBubble{
+       z-index: 3;
+    }
+}
+
+.footerBubble{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    z-index: 3;
 }
 
 .footerLogo{
@@ -66,6 +83,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    z-index: 120;
 }
 
 .footerLinks{
@@ -73,40 +91,41 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    z-index: 120;
     ul{
         list-style: none;
         display: flex;
-
-        li{
-            margin-right: 10px;
-        }
-
         a{
-            margin-left: 32px;
-    
+            margin-left: 44px;
             &:hover{
+
                 cursor: pointer;
                 filter: brightness(0) saturate(100%) invert(12%) sepia(99%) saturate(6818%) hue-rotate(273deg) brightness(93%) contrast(104%);
             }
+        }
+
+        a:first-child{
+            margin-left: 0px;
         }
     }
   
 }
 
 .footerNav{
+    margin-top: 24px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
+    z-index: 120;
     ul{
-        position: absolute;
-        top: 171px;
+        padding-top: 32px;
         display: flex;
         list-style: none;  
         li{
-            font-size: clamp(14px, 2vw, 18px);
+            font-size: 18px;
 
             &:hover{
                 color: $violet;
@@ -124,7 +143,7 @@
     p{
         text-wrap: nowrap;
         padding-top: 23px;
-        font-size: clamp(18px, 3vw,24px);
+        font-size: 24px;
         color: white;
     }
 }
@@ -157,6 +176,50 @@
                 filter: brightness(0) saturate(100%) invert(7%) sepia(90%) saturate(1439%) hue-rotate(337deg) brightness(97%) contrast(109%) !important;
             }
             
+        }
+    }
+  }
+
+
+  @media(max-width: 850px){
+
+
+    .footerContent{
+        padding-top: 120px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+
+        .footerLogo{
+            margin-top: 48px;
+        }
+    }
+
+    .footerNav{
+        margin-top: 12px;
+    }
+
+    .footerLinks{
+        justify-content: center;
+        align-items: center;
+    }
+
+  }
+
+@media(max-width: 670px){
+    .footerShape{
+        left: calc((100% - 247px) / 2 );
+    }
+  }
+
+  @media(max-width: 415px){
+    
+    .footerNav{
+        ul{
+            flex-direction: column;
+
+            li{
+                margin: 12px 0px;
+            }
         }
     }
   }

@@ -1,6 +1,7 @@
 import { Component, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { ColorSwapService } from '../../color-swap.service';
+import { TranslationsService } from '../../translations.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,17 +11,23 @@ import { ColorSwapService } from '../../color-swap.service';
   styleUrl: './nav-bar.component.scss'
   
 })
-export class NavBarComponent {
-  constructor(public ThemeColor: ColorSwapService, private renderer: Renderer2){
-  }
 
+
+export class NavBarComponent {
+  constructor(
+    public ThemeColor: ColorSwapService, 
+    private renderer: Renderer2, 
+    public Language: TranslationsService
+  ) {}
+
+  currentLanguage = "german";
   isColorNavOn = false;
   hideNavigation = true;
   blueColorTheme = true;
-
   isMobilNavOn = false;
   hideMobilNavigation = true;
   setMobilOff = true;
+
 
   toogleMobilNav(){
     this.isMobilNavOn = !this.isMobilNavOn;
@@ -82,6 +89,15 @@ export class NavBarComponent {
       this.renderer.setStyle(document.body, 'background-color', '#040a2e');
     } else {
       this.renderer.setStyle(document.body, 'background-color', '#160302');
+    }
+  }
+
+  switchLanguage(){
+    this.Language.isCurrentLanguageEnglish = !this.Language.isCurrentLanguageEnglish;
+    if(!this.Language.isCurrentLanguageEnglish){
+      this.currentLanguage = "german";
+    } else {
+      this.currentLanguage = "english";
     }
   }
 

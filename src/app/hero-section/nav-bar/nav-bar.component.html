@@ -44,7 +44,7 @@
                     </div>
                     </nav>
                 </div></div></li>
-                <a><li><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" src="./assets/img/hero/german-icon.svg"></li></a>
+                <a><li class="iconsMenuSize"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" [src]="Language.isCurrentLanguageEnglish ? './assets/img/english.svg' : './assets/img/german.svg'" (click)='switchLanguage()'></li></a>
             </ul>
         </nav>
     </div>
