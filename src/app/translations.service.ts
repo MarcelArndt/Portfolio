@@ -71,7 +71,18 @@ export class TranslationsService {
       contact:['Got a problem to solve?','Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.<br><br>Need a Frontend developer?', 'Contact me!', "Your Name", "Your E-Mail", "Your Message", "Send Massage"],
       footer:[],
       impressum:[],
-}
+    }
   }
-  
+
+  LanguagePath = this.text.german;
+  setLanguagePath(){
+    this.LanguagePath = this.isCurrentLanguageEnglish ? this.text.english : this.text.german;
+  }
+
+  getText(categories:string, index:number, subCategories:string = ""){
+    if(subCategories != ""){
+      return 'this.LanguagePath' + '.' + categories + `[${index}]` + '.' + subCategories
+    }
+    return 'this.LanguagePath' + '.' + categories + `[${index}]`
+  }
 }

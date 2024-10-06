@@ -20,7 +20,7 @@ export class NavBarComponent {
     public Language: TranslationsService
   ) {}
 
-  currentLanguage = "german";
+  public currentLanguage:string = 'german';
   isColorNavOn = false;
   hideNavigation = true;
   blueColorTheme = true;
@@ -100,5 +100,7 @@ export class NavBarComponent {
       this.currentLanguage = "english";
     }
   }
+
+
 
 }

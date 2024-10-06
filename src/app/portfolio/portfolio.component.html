@@ -12,9 +12,11 @@
         <div class="projectWrapper">
 
         <div class="projectContainer"> 
-            <div class="projectPircture">
-                <img src="./assets/img/portfolio/project-1.png">
-                <img class="position_one" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-1.png' : './assets/img/portfolio/shape-project-1-orange.png'">
+            <div class="PirctureVerticalWrapper">
+                <div class="projectPircture">
+                    <img src="./assets/img/portfolio/project-1.png">
+                    <img class="position_one" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-1.png' : './assets/img/portfolio/shape-project-1-orange.png'">
+                </div>
             </div> 
             <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}">
                 <h5>Project Join</h5>
@@ -27,11 +29,13 @@
             </div> 
         </div>
 
-        <div class="projectContainer odd"> 
-            <div class="projectPircture">
-                <img src="./assets/img/portfolio/project-2.png">
-                <img class="position_two" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-2.png' : './assets/img/portfolio/shape-project-2-orange.png'">
-            </div> 
+        <div class="projectContainer odd">
+            <div class="PirctureVerticalWrapper"> 
+                <div class="projectPircture">
+                    <img src="./assets/img/portfolio/project-2.png">
+                    <img class="position_two" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-2.png' : './assets/img/portfolio/shape-project-2-orange.png'">
+                </div> 
+            </div>
             <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}">
                 <h5>Phantom Forest</h5>
                 <p>A simple Jump-and-Run game based on an object-oriented approach. Help your Hero to fight against any Evil in the nearest forest.</p>
@@ -44,10 +48,12 @@
         </div>
 
         <div class="projectContainer"> 
-            <div class="projectPircture">
-                <img src="./assets/img/portfolio/project-3.png">
-                <img class="position_three" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-3.png' : './assets/img/portfolio/shape-project-3-orange.png'">
-            </div> 
+            <div class="PirctureVerticalWrapper">
+                <div class="projectPircture">
+                    <img src="./assets/img/portfolio/project-3.png">
+                    <img class="position_three" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-3.png' : './assets/img/portfolio/shape-project-3-orange.png'">
+                </div> 
+            </div>
             <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}">
                 <h5>Pokédex</h5>
                 <p>Based on the PokéAPI - A simple library that provides and catalogues pokemon information.</p>
@@ -58,8 +64,6 @@
                 </div>
             </div> 
         </div>
-
-        <div class="projectContainer"></div>
     </div>
     </div>
 </section>

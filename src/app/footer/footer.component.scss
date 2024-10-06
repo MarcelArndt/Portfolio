@@ -41,7 +41,8 @@
     z-index: 120;
     position: absolute;
     top: -130px;
-    left: 19vw;
+    left: calc((100% - 247px) / 3);
+
 }
 
 .footerWrapper{
@@ -181,7 +182,7 @@
   }
 
 
-  @media(max-width: 850px){
+  @media(max-width: 870px){
 
 
     .footerContent{
@@ -203,14 +204,12 @@
         align-items: center;
     }
 
-  }
-
-@media(max-width: 670px){
     .footerShape{
         left: calc((100% - 247px) / 2 );
     }
-  }
 
+  }
+  
   @media(max-width: 415px){
     
     .footerNav{
