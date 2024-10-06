@@ -1,0 +1,394 @@
+$baseFontSize: clamp(21px, 2vw, 24px);
+$baseTextColor:  #00095B;
+$violet: #7E0EEE;
+$orange: #EE790E;
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../public/assets/font/Outfit-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 1000;
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
+
+
+*{
+    margin: 0px;
+    font-family: "Outfit";
+    font-weight: 350;
+    color: $baseTextColor;
+}
+
+ul{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-inline-start: 0px;
+}
+
+body{
+  background-color: #040a2e;
+}
+
+h1{
+  z-index: 98;
+  line-height: 126%;
+  font-size: clamp(48px, 8vw, 112px);
+  letter-spacing: 2px;
+  color: $violet;
+  font-weight:600;
+  text-transform: capitalize;
+}
+
+h2{
+  line-height: 126%;
+  margin-top: 16px;
+  font-size: clamp(21px, 3vw, 40px);
+  color: $baseTextColor;
+  font-weight:300;
+  text-transform: uppercase;
+}
+
+h3{
+  line-height: 126%;
+  margin-top: 16px;
+  font-size: clamp(32px, 4vw, 56px);
+  letter-spacing: 3px;
+  color: $violet;
+  font-weight:bold;
+  margin-bottom: 16px;
+}
+
+h4{
+  font-size: clamp(24px, 4vw, 28px);
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+
+}
+
+.shape{
+  z-index: 5;
+  position: absolute;
+  img{
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+
+.bubble{
+  z-index: 4;
+  position: absolute;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.left{
+  left: 0px;
+}
+
+.right{
+  right: 0px;
+}
+
+.top{
+  top: 0px;
+}
+
+.bottom{
+  bottom: 0px;
+}
+
+.TextViolet{
+  color: $violet;
+}
+
+.button{
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  text-wrap: nowrap;
+  justify-content: center;
+  z-index: 300;
+  font-size: clamp(16px, 2vw, 21px);
+  font-weight: 650;
+  color: white;
+  max-width: max-content;
+  border-radius: 14px;
+  padding: 16px 44px;
+  border: 3px solid transparent;
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.outlineButton{
+  border: 3px solid $baseTextColor;
+  color: $baseTextColor;
+  &:hover{
+    border: 3px solid $violet;
+    color: $violet;
+  }
+}
+
+
+.colorViolet{
+  background-color: $violet;
+  &:hover{
+    background-color: white;
+    border: 3px solid $violet;
+    color: $violet;
+  }
+}
+
+.whiteText{
+  font-size: $baseFontSize;
+  color: white;
+}
+
+.boldText{
+  font-weight: bold;
+}
+
+.blueBackgroundElement{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% - 5px);
+  overflow-x:visible;
+
+  &::before{
+    content: "";
+    width: calc(100%);
+    height: 55px;;
+    width: 100%;
+    left: 0px;
+    top: -55px;
+    background-color: #85E8DD;
+    position: absolute;
+    background: rgb(24,2,31);
+    background: linear-gradient(360deg, rgba(4, 11, 74, 0.4) 0%, rgba(12, 2, 31, 0) 100%);
+  }
+  &::after{
+    content: "";
+    width: calc(100%);
+    height: 25px;;
+    width: 100%;
+    left: 0px;
+    bottom: -25px;
+    filter: blur(1px);
+    background-color: #85E8DD;
+    position: absolute;
+    filter: blur(1px);
+    background: rgb(24,2,31);
+    background: linear-gradient(180deg, rgba(13, 8, 88, 0.25) 0%, rgba(13, 8, 88, 0) 100%);
+  }
+}
+
+hr{
+  position: relative;
+  display: block;
+  width: 10%;
+  height: 100%;
+  border: none;
+
+  &::before{
+    position: absolute;
+    content: "";
+    background-color: $violet;
+    width: 2px;
+    left: 50%;
+    right: 50%;
+    height: 250px;
+    top: calc(50% - (250px / 2));
+  }
+}
+
+.bold{
+  text-transform: uppercase;
+  line-height: 64px;
+}
+
+.color{
+  color: $violet;
+}
+
+@media (max-width: 1000px){
+}
+
+.orangeHover{
+  &:hover{
+    color: $orange;
+  }
+}
+
+.orangeDarkText {
+  color: #360303 !important;
+}
+
+.orangeDarkFilter {
+  filter: brightness(0) saturate(100%) invert(7%) sepia(90%) saturate(1439%) hue-rotate(337deg) brightness(97%) contrast(109%) !important;
+  &:hover{
+    filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+  }
+}
+
+.orangeBox-Shadow{
+  box-shadow: 0px 10px 0 0 #360303 !important;
+  &::before{
+    content: "";
+    position: absolute;
+    top:8px;
+    width: 100%;
+    max-width: 43px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0px 10px 0 0 #360303 !important;
+
+  }
+}
+
+.orangeBefore{
+    &::before{
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #360303 !important;
+  }
+}
+
+.orangeDarkBackground{
+  background-color: #360303 !important;
+
+  &::before{
+    background-color: #360303 !important;
+  }
+  &::after{
+    background-color: #360303 !important;
+  }
+}
+
+.MenuOrange{
+  .boardwalk{
+    background-color: #360303 !important;
+
+    &::before{
+      background-color: #360303 !important;
+    }
+  }
+}
+
+.orangeColor{
+  color: $orange;
+}
+
+.orangeLink{
+  color: #360303;
+  &:hover{
+    color: $orange !important;
+  }
+
+  li{
+    color: #360303;
+    &:hover{
+      color: $orange !important;
+    }
+  }
+}
+
+.backgroundOrange {
+  background-color: $orange;
+}
+
+.filterToOrange {
+  filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+
+  &:hover{
+    filter: brightness(1000)  invert(0) sepia(73%) saturate(0) hue-rotate(0) brightness(100%) contrast(100%) !important;
+  }
+}
+
+.orangeButtonHover{
+  &:hover{
+    background-color: white;
+    border: 3px solid $orange;
+    color: $orange;
+  }
+}
+
+.orangeIconButtenAboutMe{
+  ul{
+    li{
+      img{
+        filter: brightness(0) saturate(100%) invert(43%) sepia(3%) saturate(4564%) hue-rotate(314deg) brightness(94%) contrast(90%) !important;
+      }
+      &:hover{
+        filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+      }
+    }
+    .active{
+      filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+    }
+  }
+}
+
+.yellowBackground{
+  background-color: #EEB45E !important;
+}
+
+
+.orangeHoverEffektSkills{
+  ul{
+    li{
+      &:hover img{
+        filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+    }
+      div{
+        background-color: #EE790E !important;
+        &::after{
+          filter: brightness(0) saturate(100%) invert(63%) sepia(73%) saturate(3921%) hue-rotate(356deg) brightness(96%) contrast(94%) !important;
+        }
+      }
+    }
+  }
+}
+
+.filterToYellow{
+  img{
+    filter: brightness(0) saturate(100%) invert(86%) sepia(34%) saturate(421%) hue-rotate(5deg) brightness(100%) contrast(90%) !important;
+  }
+}
+
+.filterToBrightYellow{
+  img{
+    filter: brightness(0) saturate(100%) invert(93%) sepia(83%) saturate(526%) hue-rotate(341deg) brightness(98%) contrast(91%) !important;
+  }
+}
+  
+.filterToPinkRed{
+  img{
+    filter: saturate(90%) invert(50%) sepia(76%) saturate(700%) hue-rotate(310deg) brightness(150%) contrast(100%) !important;
+  }
+}
+
+.filterToDeepOrange{
+  img{
+    filter: brightness(0) saturate(100%) invert(49%) sepia(81%) saturate(2618%) hue-rotate(340deg) brightness(94%) contrast(90%) !important;
+  }
+}
+
+.filterToCyan{
+  img{
+    filter: brightness(0) saturate(100%) invert(83%) sepia(21%) saturate(647%) hue-rotate(124deg) brightness(98%) contrast(91%) !important;
+  }
+}
+
+.wrapperOrangeTheme{
+  background-color: #E8E1E1 !important;
+}

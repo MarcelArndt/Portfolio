@@ -1,0 +1,322 @@
+@import '../../styles.scss';
+
+#skills{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        width: calc(100%);
+        height: 55px;;
+        width: 100%;
+        left: 0px;
+        top: -55px;
+        z-index: 10;
+        background-color: #85E8DD;
+        background: rgb(24,2,31);
+        background: linear-gradient(360deg, rgba(4, 11, 74, 0.5) 0%, rgba(12, 2, 31, 0) 100%);
+      }
+
+
+      &::after{
+        content: "";
+        position: absolute;
+        width: calc(100%);
+        height: 21px;;
+        width: 100%;
+        left: 0px;
+        bottom: -20px;
+        z-index: 10;
+        background-color: #85E8DD;
+        background: rgb(24,2,31);
+        background: linear-gradient(180deg, rgba(4, 11, 74, 0.18) 0%, rgba(12, 2, 31, 0) 100%);
+      }
+}
+
+.blueBG{
+    background-color: #85E8DD;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.overflowBox{
+    position: absolute;
+    width: 256px;
+    height: 316px;
+    top: -155px;
+    right: 73px;
+    z-index: 10;
+}
+
+.skillMainWrapper{
+    width: 100%;
+    position: relative;
+}
+
+.smallScreen{
+    display: none;
+}
+
+.shapeInside{
+    top: 80px;
+}
+
+.SkillsContentWrapper{
+    z-index: 99;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.backgroundWrapper{
+    top: 0px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+    height: 100%;
+    position: absolute;
+}
+
+.TextWrapper{
+    z-index: 99;
+    margin-right: 190px;
+    padding-bottom: 92px;
+    width: 55%;
+    margin-top: calc(109px - 47px);
+    max-width: 572px;
+    p{
+        margin-bottom: 42px;
+    } 
+}
+
+.skillsLogoWrapper{
+    z-index: 99;
+    margin-left: 190px;
+    max-width: 405px;
+    width: 30%;
+    ul{
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        padding-inline-start: 0px;
+        margin-top: calc(92px - 47px);
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        li{
+            max-width: 53px;
+            width: 100%;
+            margin: 47px 5%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            &:hover div{
+                user-select: none;
+                position: absolute;
+                transform: translateY(-52px);
+                opacity: 1;
+                transition: transform 0.125s ease-in-out, opacity 0.35s ease-in-out;
+            }
+
+            &:hover img{
+                filter: brightness(0) saturate(100%) invert(86%) sepia(40%) saturate(6598%) hue-rotate(211deg) brightness(105%) contrast(98%);
+            }
+
+            div{
+                position: absolute;
+                display: block;
+                transform: translateY(-35px);
+                border-radius: 6px;
+                padding: 2px 12px;
+                color: white;
+                background-color: $violet;
+                text-wrap: nowrap;
+                opacity: 0;
+                font-size: 21px;
+                transition: transform 0.125s ease-in-out, opacity 0.1s ease-in-out, font-size 1s ease-in-out;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: -8px;
+                    left: calc(50% - 11px);
+                    right: calc(50% - 11px);
+                    width: 22px;
+                    height: 12px;
+                    background-image: url(../../../public/assets/img/skills/icons/hover-after-element.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+
+
+            img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 48px;
+                max-height: 48px;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+
+    h3{
+        z-index: 399;
+    }
+}
+
+@media (max-width: 1149px) {
+
+
+}
+
+@media (max-width: 1300px) {
+    .TextWrapper{
+        max-width: 1440px;
+        width: 75%;
+        margin-right: 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .blueBG{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shapeInside{
+        top: 240px;
+    }
+
+    .skillsLogoWrapper{
+        z-index: 99;
+        margin-left: 0px;
+        max-width: 1440px;
+        width: 100%;
+        max-width: 700px;
+
+       ul{
+        max-width: 1440px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        li:nth-child(12){
+            display: none;
+        }
+       }
+
+    }
+
+
+    .SkillsContentWrapper{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        position: relative;
+        padding-top: calc(32px + 0px);
+
+
+    }
+
+    hr{
+        display: none;
+    }
+
+    .TextWrapper{
+        margin-top: 96px;
+        text-align: center;
+        max-width: 1440px;
+        width: 57%;
+        margin-right: 0px;
+        display: flex;
+        justify-self: center;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0px;
+        a{
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+
+    .skillsLogoWrapper{
+        width: 60%;
+        max-width: 700px;
+    }
+ }
+
+@media (max-width:630px){
+    .shapeInside{
+        display: none;
+    }
+
+    .TextWrapper{
+        width: 90%;
+    }
+
+    .skillsLogoWrapper{
+        overflow: hidden;
+        ul{
+            li{
+                div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                   vertical-align: middle;
+                    min-height: 68px;
+                    text-wrap:wrap;
+                    font-size: 16px;
+                    text-align: center;
+                    top: -35px;
+                }
+            }
+        }
+    }
+
+    .overflowBox{
+        overflow: hidden;
+        width: 190px;
+        right: 0px;
+
+        .skillsTransition{
+            position: absolute;
+            left: 0px;
+            top:0px
+        }
+    }
+
+    .whiteText{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 606px) {
+
+    .skillsLogoWrapper{
+        width: 99%;
+        max-width: 1440px;
+    }
+
+}
+
+.bottom{
+    bottom: -3px;
+}

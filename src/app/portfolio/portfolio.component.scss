@@ -1,0 +1,336 @@
+@import '../../styles.scss';
+
+.portfolio{
+    position: relative;
+    &::after{
+        z-index: -11;
+        background-color: #E1E4E8;
+        content: "";
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .portfolioWrapper{
+        padding-bottom: 142px;
+        overflow: hidden;
+    }
+}
+
+.set_index{
+    z-index: 5;
+}
+
+.bubble_three{
+    top: 18%;
+}
+
+.bubble_four{
+    bottom: -42%;
+}
+
+
+.headlineWrapper{
+    z-index: 99;
+    padding-top: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: clamp(24px, 3vw, 32px);
+    padding-left: 32px;
+    padding-right: 32px;
+    p{
+        z-index: 99;
+    }
+
+
+    h3{
+        z-index: 99;
+        font-size: clamp(52px, 6vw, 80px);
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+    }
+}
+
+.projectWrapper{
+    z-index: 99;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projectContainer{
+    z-index: 99;
+    gap: 56px;
+    z-index: 10;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 100%;
+    min-height: 360px;
+
+    .PirctureVerticalWrapper{
+        display: flex;
+        align-items: flex-end;
+        min-height: 380px;
+    }
+
+    h5{
+        font-weight: bold;
+        font-size: clamp(32px, 6vw, 38px);
+        color: $violet;
+    }
+
+    .projectText{
+        z-index: 99;
+        position: relative;
+        margin-left: 64px;
+        font-size: clamp(18px, 3.5vw, 24px);
+        max-width: 426px;
+         
+        p{
+            z-index: 15;
+            margin-top: 24px;
+        }
+
+        span{
+            display: block;
+            margin-top: 12px;
+            color: #149AE6;
+            font-weight: 200;
+            font-size: clamp(16px, 3.5vw, 20px);
+        }
+    }
+
+    .projectPircture{
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+
+        img:first-child{
+            object-fit: contain;
+            height: 300px;
+            aspect-ratio: 16/9;
+            object-position: bottom;
+        }
+
+
+        .position_one{
+            position: absolute;
+            width:100%;
+            max-width: 227px;
+            left: -25%;
+            bottom: -22%;
+        }
+
+        .position_two{
+            position: absolute;
+            width:100%;
+            max-width: 261px;
+            right: -14%;
+            bottom: -37%;
+        }
+
+        .position_three{
+            position: absolute;
+            width:100%;
+            max-width: 227px;
+            left: -17%;
+            top: -2.5%;
+        }
+    }
+
+    .buttonContainer{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0px;
+        
+        .button{
+            margin-right: 24px;
+        }
+    }
+}
+
+.odd{
+    flex-direction: row-reverse;
+    .projectText{
+        position: relative;
+        margin-left: 0px;
+        padding-right: 64px;
+    }
+}
+
+.set_infront{
+    z-index: 10;
+}
+
+@media (max-width:1744px){
+
+    .bubble_four{
+        bottom: -500px;
+    }
+
+    .projectPircture{
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .odd{
+        .projectText{
+            padding-right: 0px;
+        }
+    }
+    
+    .projectContainer{
+        margin-top: 140px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        max-width: 1000px;
+
+        .PirctureVerticalWrapper{
+            min-height:auto;
+        }
+
+        .projectPircture{
+            margin-top: 0px;
+            max-width: 720px;
+            aspect-ratio: 16 / 9;
+
+            img:first-child{
+            object-fit: contain;
+            aspect-ratio: auto;
+            height: auto;
+            width: 100%;
+            object-position: top;
+            }
+
+            .position_one{
+                width: 30%;
+                top: auto;
+                left: -11.5%;
+                bottom: -18.5%;
+            }
+
+            .position_two{
+                width: 38%;
+                top: auto;
+                left: auto;
+                right: -13%;
+                bottom: -36.5%;
+            }
+
+            .position_three{
+                transform: rotate(180deg);
+                -webkit-transform: scaleY(-1);
+                transform: scaleY(-1);
+                width: 30%;
+                top: auto;
+                left: -12%;
+                bottom: -21%;
+            }
+
+        }
+
+        .projectText{
+            margin-left: 0px;
+            text-align: center;
+            max-width: 720px;
+        }
+    
+        .buttonContainer{
+            justify-content: center;
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            position: static;
+            gap: 16px;
+
+            .button {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .blueBG{
+        border:5px solid black
+    }
+}
+
+.orangeProject{
+    h5{
+        color: $orange !important;
+    }
+    p{
+        color: #360303 !important;
+    }
+
+    span{
+        color: #D10000 !important;
+    }
+
+    .buttonContainer{
+        .colorViolet{
+            background-color: $orange !important;
+            border: 3px solid $orange !important;
+
+            &:hover{
+                color: $orange !important;
+                background-color: white !important;
+            }
+        }
+
+        .outlineButton{
+            border: 3px solid #360303 !important;
+            color: #360303 !important;
+
+            &:hover{
+                color: $orange !important;
+                border: 3px solid $orange !important;
+            }
+        }
+    } 
+}
+
+@media (max-width:844px){
+
+    .bubble_four{
+        bottom: -300px;
+    }
+}
+
+@media (max-width:625px){
+
+    .bubble_four{
+        bottom: -150px;
+    }
+}
+
+
+@media (max-width:435px){
+    .bubble_four{
+
+        bottom: -50px;
+    }
+}
+
+@media (max-width:435px){
+    .projectContainer{
+        .buttonContainer{
+            .button{
+                font-size: 16px !important;
+                padding: 12px 22px !important;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,21 @@
+<section class="AbouMeSection" id="aboutMe">
+    <div class="shape shape-above"><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/aboutme/shape-above.png' : './assets/img/aboutme/shape-above-orange.png'"></div>
+    <div class="bubble bottom right" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/hero-right-bubble-violet.png"></div>
+    <div class="bubble aboutMeBubleLeft left" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/hero-left-bubble-cyan.png"></div>
+    <div class="profilPicture"><img src="./assets/img/aboutme/person.png"></div>
+    <div [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}" class="AboutMeWrapper">
+        <h3 [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}">About Me</h3>
+        <div id="AboutMeText" [ngClass]="animationClass"><p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}">{{displayTextBox}}</p></div>
+        <nav [ngClass]="{'orangeIconButtenAboutMe': !ThemeColor.currentColorIsBlue}" class="AboutMeMenuBar">
+            <ul> 
+                <li [ngClass]="{'active': activeTextBoxIndex === 0}"><img (click)="enbaleTextBox(0)" src="./assets/img/aboutme/nav/me-icon.svg"></li>
+                <li [ngClass]="{'active': activeTextBoxIndex === 1}"><img (click)="enbaleTextBox(1)" src="./assets/img/aboutme/nav/location-icon.svg"></li>
+                <li [ngClass]="{'active': activeTextBoxIndex === 2}"><img (click)="enbaleTextBox(2)" src="./assets/img/aboutme/nav/lamp-icon.svg"></li>
+                <li [ngClass]="{'active': activeTextBoxIndex === 3}"><img (click)="enbaleTextBox(3)" src="./assets/img/aboutme/nav/puzzle-icon.svg"></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+
+
