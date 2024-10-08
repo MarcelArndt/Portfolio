@@ -39,6 +39,15 @@
     justify-content: center;
 }
 
+.overflowBox{
+    position: absolute;
+    width: 256px;
+    height: 316px;
+    top: -155px;
+    right: 73px;
+    z-index: 10;
+}
+
 .skillMainWrapper{
     width: 100%;
     position: relative;
@@ -46,12 +55,6 @@
 
 .smallScreen{
     display: none;
-}
-
-.skillsTransition{
-    top: -155px;
-    right: 73px;
-    z-index: 10;
 }
 
 .shapeInside{
@@ -126,7 +129,7 @@
                 display: block;
                 transform: translateY(-35px);
                 border-radius: 6px;
-                padding: 4px 12px;
+                padding: 2px 12px;
                 color: white;
                 background-color: $violet;
                 text-wrap: nowrap;
@@ -192,6 +195,10 @@
         align-items: center;
     }
 
+    .shapeInside{
+        top: 240px;
+    }
+
     .skillsLogoWrapper{
         z-index: 99;
         margin-left: 0px;
@@ -232,7 +239,7 @@
     }
 
     .TextWrapper{
-        margin-top: 0px;
+        margin-top: 96px;
         text-align: center;
         max-width: 1440px;
         width: 57%;
@@ -241,7 +248,7 @@
         justify-self: center;
         flex-direction: column;
         align-items: center;
-
+        padding-bottom: 0px;
         a{
             display: block;
         }
@@ -254,13 +261,57 @@
         width: 60%;
         max-width: 700px;
     }
+ }
 
+@media (max-width:630px){
+    .shapeInside{
+        display: none;
+    }
+
+    .TextWrapper{
+        width: 90%;
+    }
+
+    .skillsLogoWrapper{
+        overflow: hidden;
+        ul{
+            li{
+                div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                   vertical-align: middle;
+                    min-height: 68px;
+                    text-wrap:wrap;
+                    font-size: 16px;
+                    text-align: center;
+                    top: -35px;
+                }
+            }
+        }
+    }
+
+    .overflowBox{
+        overflow: hidden;
+        width: 190px;
+        right: 0px;
+
+        .skillsTransition{
+            position: absolute;
+            left: 0px;
+            top:0px
+        }
+    }
+
+    .whiteText{
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 606px) {
 
     .skillsLogoWrapper{
-        width: 100%;
+        width: 99%;
         max-width: 1440px;
     }
 

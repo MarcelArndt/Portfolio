@@ -392,3 +392,29 @@ hr{
 .wrapperOrangeTheme{
   background-color: #E8E1E1 !important;
 }
+
+.scrollwatcher{
+  z-index: 1000;
+  position: fixed;
+  height: 5px;
+  width: 100%;
+  scale: 0 1;
+  background: rgb(201,0,255);
+  background: linear-gradient(90deg, rgba(201,0,255,1) 0%, rgba(0,255,231,1) 28%, rgba(201,0,255,1) 79%);
+  transform-origin: left;
+  animation: scrollwatching linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scrollInside{
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes scrollwatching{
+  to{
+    scale: 1 1;
+  }
+}

@@ -1,37 +1,40 @@
 <section class="skillMainWrapper" id="skills">
-        <div class="shape right skillsTransition"><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/skills/shape-right.png' : './assets/img/skills/shape-right-orange.png'"></div>
+       
         <div class="shape left shapeInside" ><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/skills/shape-left.png' : './assets/img/skills/shape-left-orange.png'"></div>
-        <div class="blueBG" [ngClass]="{'yellowBackground': !ThemeColor.currentColorIsBlue}">
-                <div class="TextWrapper">
+                
+                <div class="blueBG" [ngClass]="{'yellowBackground': !ThemeColor.currentColorIsBlue}">
+                        <div class="overflowBox"><div class="shape right skillsTransition"><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/skills/shape-right.png' : './assets/img/skills/shape-right-orange.png'"></div></div>
+                        <div class="TextWrapper">
                         <h3 class="bigScreen" [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}">My Skills</h3>
                         <p class="whiteText">My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.
                         <br><br><h4 class="boldText whiteText">Looking for another skill?</h4>
                         Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
                         <a href="#contact" class="button colorViolet" [ngClass]="{'backgroundOrange': !ThemeColor.currentColorIsBlue, 'orangeButtonHover': !ThemeColor.currentColorIsBlue}">Get in Touch</a>
+                        </div>
+                        <hr>
+                        <nav class="skillsLogoWrapper" [ngClass]="{'orangeHoverEffektSkills': !ThemeColor.currentColorIsBlue}">
+                        
+                                <h3 class="smallScreen">My Skills</h3>
+                                <ul>
+                                        <li><div>HTML 5</div><img src="./assets/img/skills/icons/html5.png"></li>
+                                        <li><div>CSS 3</div><img src="./assets/img/skills/icons/css3.png"></li>
+                                        <li><div>JavaScript</div><img src="./assets/img/skills/icons/js.png"></li>
+                                        <li><div>TypeScript</div><img src="./assets/img/skills/icons/ts.png"></li>
+
+                                        <li><div>Angular</div><img src="./assets/img/skills/icons/angular.png"></li>
+                                        <li><div>Git Hub</div><img src="./assets/img/skills/icons/git.png"></li>
+                                        <li><div>Firebase</div><img src="./assets/img/skills/icons/firebase.png"></li>
+                                        <li><div>Api</div><img src="./assets/img/skills/icons/api.png"></li>
+
+                                        <li><div>Scrum</div><img src="./assets/img/skills/icons/scrum.png"></li>
+                                        <li><div>Material Design</div><img src="./assets/img/skills/icons/material.png"></li>
+                                        <li><div>Adobe Creative Cloud</div><img src="./assets/img/skills/icons/creative_cloud.png"></li>
+                                        <li></li>
+
+                                        <li><div>Continually learning</div><img src="./assets/img/skills/icons/learning.png"></li>
+                                </ul>
+                        </nav>
                 </div>
-               <hr>
-                <nav class="skillsLogoWrapper" [ngClass]="{'orangeHoverEffektSkills': !ThemeColor.currentColorIsBlue}">
-                        <h3 class="smallScreen">My Skills</h3>
-                        <ul>
-                                <li><div>HTML 5</div><img src="./assets/img/skills/icons/html5.png"></li>
-                                <li><div>CSS 3</div><img src="./assets/img/skills/icons/css3.png"></li>
-                                <li><div>JavaScript</div><img src="./assets/img/skills/icons/js.png"></li>
-                                <li><div>TypeScript</div><img src="./assets/img/skills/icons/ts.png"></li>
-
-                                <li><div>Angular</div><img src="./assets/img/skills/icons/angular.png"></li>
-                                <li><div>Git Hub</div><img src="./assets/img/skills/icons/git.png"></li>
-                                <li><div>Firebase</div><img src="./assets/img/skills/icons/firebase.png"></li>
-                                <li><div>Api</div><img src="./assets/img/skills/icons/api.png"></li>
-
-                                <li><div>Scrum</div><img src="./assets/img/skills/icons/scrum.png"></li>
-                                <li><div>Material Design</div><img src="./assets/img/skills/icons/material.png"></li>
-                                <li><div>Adobe Creative Cloud</div><img src="./assets/img/skills/icons/creative_cloud.png"></li>
-                                <li></li>
-
-                                <li><div>Continually learning</div><img src="./assets/img/skills/icons/learning.png"></li>
-                        </ul>
-                </nav>
-        </div>
 
         <div class="bubble bottom" [ngClass]="{'filterToDeepOrange': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/skills/bubble-blue-right.png"></div>
         <div class="bubble bottom left" [ngClass]="{'filterToBrightYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/skills/bubble-pink-right.png"></div>

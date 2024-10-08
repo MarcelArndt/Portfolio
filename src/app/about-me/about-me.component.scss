@@ -88,3 +88,89 @@
     } 
 }
 
+
+@media (max-width: 1190px){
+    .profilPicture{
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-top: 48px;
+        min-height: 415px;
+        width: 100%;
+        overflow: hidden;
+
+        img{
+            object-position: bottom;
+            min-height: 415px;
+            max-height: 680px;
+            height: 100%;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    .AboutMeWrapper{
+        margin-left: 0px;
+    }
+
+    .AbouMeSection{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 0px;
+        justify-content: center;
+        align-items: center;
+
+        .AboutMeWrapper{
+            h3{
+                vertical-align: center;
+                text-align: center;
+            }
+        }
+
+        .AboutMeText{
+            padding: 0px 12px;
+            text-align: center;
+            vertical-align: center;
+            min-height: 168px;
+        }
+
+        .AboutMeMenuBar{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .AboutMeMenuBar{
+        margin-top: 32px;
+        ul{
+ 
+         position: static;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         gap: 5%;
+ 
+         li:nth-child(1){
+             margin-right: 0px;
+             margin-left: 0px;
+         }
+         li{
+             margin: 0px 0px;
+             gap: 5%;
+         }
+        }
+     }
+}
+
+@media(max-width:450px){
+    
+    .AboutMeText{
+        font-size: 18px;
+        min-height: 236;
+    }
+
+
+}
+

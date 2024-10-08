@@ -8,10 +8,11 @@ import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ColorSwapService } from '../color-swap.service';
 
+
 @Component({
   selector: 'app-main-component',
   standalone: true,
-  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, CommonModule ],
+  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, CommonModule],
   templateUrl: './main-component.component.html',
   styleUrl: './main-component.component.scss'
 })
