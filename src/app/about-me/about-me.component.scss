@@ -165,6 +165,22 @@
 }
 
 @media(max-width:450px){
+
+    .shape-above{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        top: -168px;
+        left: 0px;
+        img{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; 
+        }
+    }
     
     .AboutMeText{
         font-size: 18px;

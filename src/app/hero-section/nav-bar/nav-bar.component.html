@@ -36,15 +36,16 @@
                     <nav class="colornav" [ngClass]="{
                         'animationshowMenu': isColorNavOn,
                         'animationhideMenu': !isColorNavOn,
+                        'orangeBorder': !ThemeColor.currentColorIsBlue,
                         
                     }">
                     <div (click)="switchToBlueTheme()" class="blue active">
                     </div>
-                    <div (click)="switchToOrangeTheme()" class="orange">
+                    <div (click)="switchToOrangeTheme()" class="orange" >
                     </div>
                     </nav>
                 </div></div></li>
-                <a><li class="iconsMenuSize"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" [src]="Language.isCurrentLanguageEnglish ? './assets/img/english.svg' : './assets/img/german.svg'" (click)='switchLanguage()'></li></a>
+                <a class="last-child"><li class="iconsMenuSize"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" [src]="Language.isCurrentLanguageEnglish ? './assets/img/english.svg' : './assets/img/german.svg'" (click)='switchLanguage()'></li></a>
             </ul>
         </nav>
     </div>

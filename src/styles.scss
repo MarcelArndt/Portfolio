@@ -406,6 +406,11 @@ hr{
   animation-timeline: scroll();
 }
 
+.orangeGradient{
+  background: rgba(255,179,0,1) !important;
+  background: linear-gradient(90deg, rgba(255,179,0,1) 0%, rgba(217,17,17,1) 28%, rgba(255,248,5,1) 79%) !important;
+}
+
 @keyframes scrollInside{
   to{
     opacity: 1;
