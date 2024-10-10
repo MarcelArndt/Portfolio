@@ -2,7 +2,7 @@
 <section class="HeroSection" id="start">
 
     <app-nav-bar></app-nav-bar>
-    <div class="shape right"><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/hero/Shape-right.png' : './assets/img/hero/Shape-right-orange.png' "></div>
+    <div class="shape right dynamicOpacity"><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/hero/Shape-right.png' : './assets/img/hero/Shape-right-orange.png' "></div>
     <div class="hero-part-left"><img src="./assets/img/hero/hero_background-part-left.png"></div>
     <div class="hero-part-right"><img src="./assets/img/hero/hero_background-part-right.png"></div>
     <div class="bubble top right" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/hero/hero-left-bubble-cyan.png"></div>
@@ -18,8 +18,8 @@
         <nav class="IconBar">
             <ul>
                 <li><a href="https://github.com/MarcelArndt" target="_blank"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'filterToOrange'" src="./assets/img/github.svg"></a></li>
-                <a><li><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'filterToOrange'" src="./assets/img/e_mail.svg"></li></a>
-                <a><li><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'filterToOrange'" src="./assets/img/linkin.svg"></li></a>
+                <li><a><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'filterToOrange'" src="./assets/img/e_mail.svg"></a></li>
+                <li><a><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'filterToOrange'" src="./assets/img/linkin.svg"></a></li>
             </ul>
         </nav>
     </div>  

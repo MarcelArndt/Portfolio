@@ -23,10 +23,12 @@
 }
 
 .bubble_three{
+    z-index: 0;
     top: 18%;
 }
 
 .bubble_four{
+    z-index: 0;
     bottom: -42%;
 }
 
@@ -62,9 +64,10 @@
 }
 
 .projectContainer{
-    z-index: 99;
+    opacity:0;
+    transform: translateY(200px);
+    z-index: 999;
     gap: 56px;
-    z-index: 10;
     margin-top: 140px;
     display: flex;
     flex-direction: row;
@@ -309,7 +312,6 @@
 }
 
 @media (max-width:625px){
-
     .bubble_four{
         bottom: -150px;
     }
@@ -318,7 +320,6 @@
 
 @media (max-width:435px){
     .bubble_four{
-
         bottom: -50px;
     }
 }
@@ -334,20 +335,21 @@
     }
 }
 
-/*
 .projectContainer{
-    opacity: 0.1;
-    scale: 0.1;
     z-index: 999;
-    transform: translateY(0);
-    animation: scrollInside linear forwards;
-    animation-range: entry cover;
+    animation: scrollInside 5s linear forwards;
 }
 
-@keyframes scrollInside{
-    to{
-      opacity: 1;
-      scale: 1;
-    }
-  }
-*/
+.thisAnimationClass{
+    opacity: 1;
+    transform: translateY(-30);
+    transition: all 0.6s ease-in-out;
+}
+
+.thisBackgroundClass{
+    opacity:1;
+    transform: translateY(0px);
+    transition: all 0.75s ease-in-out;
+}
+
+

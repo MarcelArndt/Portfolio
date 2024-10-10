@@ -45,7 +45,12 @@
 }
 
 
+h1{
+  user-select: none;
+}
+
 h2{
+  user-select: none;
 margin-bottom: 64px;
 }
 
@@ -99,6 +104,50 @@ margin-bottom: 64px;
     }
   }
 
+}
+
+@media(max-width: 556px){
+  .IconBar{
+    padding: 16px 0px 16px 0px;
+    width: 85%;
+    min-height: 44px;
+    background-color: rgba(254, 214, 255, 0.6);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+
+    ul{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      display: flex;
+    
+    }
+
+    li{
+      margin: 0px 0px;
+    }
+  }
+}
+
+@media (max-width: 690px){
+  .dynamicOpacity {
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 380px){
+  h1{
+    font-size: 36px;
+    letter-spacing: 0px;
+  }
+
+  h2{
+    margin-bottom: 32px !important;
+  }
+
+  .HeroWrapper { 
+    max-height: 60dvh;
+  }
 }
 
 

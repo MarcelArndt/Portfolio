@@ -54,6 +54,7 @@
 }
 
 .AboutMeMenuBar{
+
     ul{
         position: absolute;
         bottom: -100px;
@@ -186,7 +187,11 @@
         font-size: 18px;
         min-height: 236;
     }
+}
 
-
+.thisBackgroundClass{
+    opacity:1;
+    transform: translateY(0px);
+    transition: all 1.2s ease-in-out;
 }
 

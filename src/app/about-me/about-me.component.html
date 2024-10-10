@@ -3,7 +3,7 @@
     <div class="bubble bottom right" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/hero-right-bubble-violet.png"></div>
     <div class="bubble aboutMeBubleLeft left" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/hero-left-bubble-cyan.png"></div>
     <div class="profilPicture"><img src="./assets/img/aboutme/person.png"></div>
-    <div [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}" class="AboutMeWrapper">
+    <div [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}" class="AboutMeWrapper" scrollAnimation animationClass="thisBackgroundClass">
         <h3 [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}">About Me</h3>
         <div id="AboutMeText" [ngClass]="animationClass"><p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}">{{displayTextBox}}</p></div>
         <nav [ngClass]="{'orangeIconButtenAboutMe': !ThemeColor.currentColorIsBlue}" class="AboutMeMenuBar">
