@@ -7,12 +7,13 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ColorSwapService } from '../color-swap.service';
+import { ImpressumComponent } from '../impressum/impressum.component';
 
 
 @Component({
   selector: 'app-main-component',
   standalone: true,
-  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, CommonModule],
+  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, CommonModule, ImpressumComponent],
   templateUrl: './main-component.component.html',
   styleUrl: './main-component.component.scss'
 })

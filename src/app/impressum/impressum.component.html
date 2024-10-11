@@ -1,0 +1,24 @@
+<div class="lightbox" *ngIf="isLightboxOpen" [ngClass]="{'fadeContenIn': isClosingAnimation, 'fadeContenOut': !isClosingAnimation, 'orangeTheme' : !ThemeColor.currentColorIsBlue}" (click)="closeLightbox()">
+    <div class="closingButton" (click)="closeLightbox()" [ngClass]="{'hide': isClosingAnimation}">&times;</div>
+    <div class="lightboxWrapper" [ngClass]="{'fadeOutBox': isClosingAnimation, 'fadeInBox': !isClosingAnimation}" (click)="$event.stopPropagation()">
+        <div class="lightboxContent">
+
+            <div>
+                <h1>Impressum</h1>
+                <p>text</p>
+            </div>
+
+            <div>
+                <h2>Persönliche Daten</h2>
+                <p>text</p>
+            </div>
+
+            <div>
+                <h2>Sontieges</h2>
+                <p>text</p>
+            </div>
+
+
+        </div>
+    </div>
+</div>

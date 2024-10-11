@@ -9,10 +9,10 @@
     <div class="bubble top left" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/hero/hero-top-bubble-violet.png"></div>
 
     <div class="HeroWrapper">
-        <h1 [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeColor'">Crafting seamless<br>digital experiences.</h1>
-        <h2 [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkText'">A German Frontend Developer<br>
+        <h1 [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeColor'" scrollAnimation animationClass="thisAnimationHeroOne">Crafting seamless<br>digital experiences.</h1>
+        <h2 [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkText'" scrollAnimation animationClass="thisAnimationHeroTwo">A German Frontend Developer<br>
         <span class="TextViolet" [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeColor'">- Marcel Arndt -</span></h2>
-        <a class="button colorViolet" [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'backgroundOrange orangeButtonHover'">Lets Talk !</a>
+        <a class="button colorViolet heroButton"  [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'backgroundOrange orangeButtonHover'" scrollAnimation animationClass="thisAnimationHeroThree">Lets Talk !</a>
     </div>
     <div class="HeroBottomNavbarWrapper">
         <nav class="IconBar">

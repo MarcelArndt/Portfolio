@@ -1,0 +1,167 @@
+.lightbox{
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba($color: #000325, $alpha: 0.85);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closingButton{
+    background-color: #E1E4E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    width: 42px;
+    border: 3px solid #E1E4E8;
+    color: #03032b;
+    border-radius: 50%;
+    font-weight: 200;
+    position: absolute;
+    top: 3%;
+    font-size: 42px;
+    user-select: none;
+
+    &:hover{
+        cursor: pointer;
+        border: 3px solid #03032b;
+        background-color: #03032b;
+        color: #E1E4E8;
+    }
+}
+
+.lightboxWrapper{
+    position: relative;
+    width: calc(75% - 48px);
+    min-height: 75dvh;
+    background-color: #E1E4E8;
+    border: 24px solid #E1E4E8;
+    border-radius: 24px;
+    max-width: calc(1024px - 48px);
+    overflow-Y: scroll;
+}
+
+.lightboxContent{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hide{
+    display: none;
+}
+
+h2{
+    color: #7E0EEE;
+}
+
+
+.fadeOutBox{
+    animation: fade-out 0.525s ease-in forwards;
+}
+
+@keyframes fade-out{
+    0%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    55%{opacity: 1;}
+    100%{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+}
+
+
+.fadeInBox{
+    animation: fade-In 0.525s ease-in forwards;
+}
+
+@keyframes fade-In{
+    0%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    55%{opacity: 1;}
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+.fadeContenIn{
+    animation: fadeContenIn 0.525s ease-in forwards;
+}
+
+@keyframes fadeContenIn{
+    from{
+        opacity: 1;
+        backdrop-filter: blur(4px);
+    }
+    to{
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+}
+
+
+.fadeContenOut{
+    animation: fadeContenOut 0.525s ease-in forwards;
+}
+@keyframes fadeContenOut{
+    from{
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to{
+        opacity: 1;
+        backdrop-filter: blur(4px);
+    }
+}
+
+.orangeTheme{
+    background-color: rgba($color: #140300, $alpha: 0.85);
+    color: #360303;
+
+    .closingButton{
+        color: #360303;
+        background-color: #e8e1e1;
+        border-color: #e8e1e1;
+        &:hover{
+            color: #e8e1e1;;
+            background-color: #360303;
+            border-color: #360303;
+        }
+    }
+
+    .lightboxWrapper{
+        background-color: #e8e1e1;;
+        border-color: #e8e1e1;;
+    }
+
+
+    div{
+
+        h1{
+            color: #EE790E;
+        }
+
+        h2{
+            color: #EE790E;
+        }
+
+        p{
+            color: #360303;
+        }
+    }
+}
+

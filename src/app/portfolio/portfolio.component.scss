@@ -18,6 +18,21 @@
     }
 }
 
+.projectText{
+    transform: translateY(0px);
+    opacity: 0;
+}
+
+.buttonContainer{
+    transform: translateY(0px);
+    opacity: 0;
+}
+
+.PirctureVerticalWrapper{
+    transform: translateY(0px);
+    opacity: 0;
+}
+
 .set_index{
     z-index: 5;
 }
@@ -64,8 +79,6 @@
 }
 
 .projectContainer{
-    opacity:0;
-    transform: translateY(200px);
     z-index: 999;
     gap: 56px;
     margin-top: 140px;
@@ -340,16 +353,75 @@
     animation: scrollInside 5s linear forwards;
 }
 
-.thisAnimationClass{
-    opacity: 1;
-    transform: translateY(-30);
-    transition: all 0.6s ease-in-out;
+
+.thisAnimationOne{
+    animation: firstIn 1.25s ease-in-out forwards ;
+}
+  
+.thisAnimationTwo{
+    animation: firstMiddle 1.25s ease-in-out forwards !important;
+}
+  
+.thisAnimationThree{
+    animation: firstLast 1.25s ease-in-out forwards !important;
 }
 
-.thisBackgroundClass{
-    opacity:1;
-    transform: translateY(0px);
-    transition: all 0.75s ease-in-out;
-}
+
+@keyframes firstIn{
+    0%{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    25%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes firstMiddle{
+    0%{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    25%{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  
+    50%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes firstLast{
+    0%{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    50%{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  
+    75%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 
 
