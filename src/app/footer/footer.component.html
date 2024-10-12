@@ -1,5 +1,6 @@
 
-<app-impressum #lightbox [textContent]="'Dies ist ein Beispieltext in der Lightbox'"></app-impressum>
+<app-impressum #lightbox ></app-impressum>
+<app-datenschutz #datenschutz ></app-datenschutz>
 
 <div class="footer" [ngClass]="{'yellowBackground': !ThemeColor.currentColorIsBlue}">
     <div class="footerShape" ><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/footer/shape.png' : './assets/img/footer/shape-orange.png'"></div>
@@ -14,7 +15,7 @@
                 <ul>
                     <a href="#start"><li>Startseite</li></a>
                     <a (click)="lightbox.openLightbox()"><li>Impressum</li></a>
-                    <a (click)="lightbox.openLightbox()"><li>Datenschutz</li></a>
+                    <a (click)="datenschutz.openLightbox()"><li>Datenschutz</li></a>
                 </ul>
             </nav>
 

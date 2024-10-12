@@ -64,13 +64,14 @@
     overflow-Y: scroll;
     text-align: center;
 
-    strong{
+    h4{
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 21px;
         color: #7E0EEE;
         margin-top: 24px;
+        margin-bottom: 32px;
     }
 }
 
@@ -198,10 +199,9 @@ h2{
             color: #EE790E;
         }
 
-        strong{
+        h4{
             color: #EE790E;
         }
-
 
         p{
             color: #360303;

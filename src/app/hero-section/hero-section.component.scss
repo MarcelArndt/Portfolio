@@ -17,6 +17,10 @@
   opacity: 0;
 }
 
+#start{
+  user-select: none;
+}
+
 .hero-part-left{
     z-index: 3;
     opacity: 0.6;
