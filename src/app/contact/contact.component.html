@@ -10,10 +10,27 @@
                     <span class="color">Contact me!</span></p>
                 </div>
                 <div class="contactFormWrapper">
-                    <form>
-                        <input placeholder="Dein Name" id="contactName">
-                        <input placeholder="Deine E-Mail" id="contactMail">
-                        <textarea placeholder="Deine Nachricht" id="contactText"></textarea>
+                    <form (ngSubmit)='onSubmit(ContactForm)' #ContactForm="ngForm">
+
+
+                        @if (!name.valid && name.touched){
+                            <span>Please enter a correct name!</span>
+                        }
+                        <input #name="ngModel" [(ngModel)]="currentContact.name" name="name" placeholder="Dein Name" id="contactName" required minlength="3">
+
+
+                        @if (!email.valid && email.touched){
+                            <span>Please enter a correct Email address!</span>
+                        }
+                        <input #email="ngModel" [(ngModel)]="currentContact.email" name="email" placeholder="Deine E-Mail" id="contactMail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+
+
+                        @if (!message.valid && message.touched){
+                            <span>Please enter a Message</span>
+                        }
+                        <textarea  #message="ngModel" [(ngModel)]="currentContact.text" name="text" placeholder="Deine Nachricht" id="contactText" minlength="3" required></textarea>
+
+
                         <button class="button colorViolet">Send Message</button>
                     </form>
                 </div>
