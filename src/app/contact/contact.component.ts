@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColorSwapService } from '../color-swap.service';
 import { TranslationsService } from '../translations.service';
 import { FormsModule, NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { ScrollAnimationDirective } from '../scroll-animation.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule ],
+  imports: [CommonModule, FormsModule, ScrollAnimationDirective  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -18,17 +20,48 @@ export class ContactComponent {
   ){
 
   }
+
+
+  http = inject(HttpClient);
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+
+  
+  mailTest = true;
   currentContact = {
     name: "",
     email: "",
     text: "",
   };
 
-  onSubmit(ngform: NgForm){
-    if(ngform.valid && ngform.submitted){
-      console.log(this.currentContact)
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.currentContact))
+        .subscribe({
+          next: (response) => {
+
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+      ngForm.resetForm();
     }
   }
-
 
 }

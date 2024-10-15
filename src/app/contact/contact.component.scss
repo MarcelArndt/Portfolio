@@ -61,6 +61,7 @@ form{
 }
 
 .contactFormWrapper{
+    opacity: 0;
     min-width: 40%;
 
     form{
@@ -100,8 +101,8 @@ form{
 }
 
 
-
 .contactDescription{
+    opacity: 0;
     width: 100%;
     font-weight: 400;
     font-size: clamp(18px, 3vw, 24px);
@@ -163,20 +164,9 @@ form{
         padding-bottom: 80px;
     }
 
-
     .bubble-bottom{
         bottom: 0px;
         z-index: -1;
-    }
-
-
-}
-
-
-
-@media (max-width:1600px){
-    .contactDescription{
-        padding-right: 16px;
     }
 }
 
@@ -230,3 +220,96 @@ form{
     
 }
 
+
+.thisAnimationOne{
+    animation: firstIn 1.55s ease-in-out forwards ;
+}
+  
+.thisAnimationTwo{
+    animation: firstMiddle 1.25s ease-in-out forwards !important;
+}
+  
+.thisAnimationThree{
+    animation: firstLast 1.25s ease-in-out forwards !important;
+}
+
+.thisAnimationopacity{
+    animation: fade-in-opacity 1.25s ease-in-out forwards;
+}
+
+@keyframes fade-in-opacity{
+    0%{
+      opacity: 0;
+    }
+    25%{
+      opacity: 0;
+    }
+    75%{
+      opacity: 1;
+    }
+    100%{
+        opacity: 1;
+      }
+  }
+
+
+@keyframes firstIn{
+    0%{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    25%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes firstMiddle{
+    0%{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    25%{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  
+    50%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes firstLast{
+    0%{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    50%{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  
+    75%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .setIndex{
+    z-index: 0;
+  }

@@ -217,3 +217,15 @@ h2{
     }
 }
 
+@media (max-width: 516px){
+    .lightboxWrapper{
+        width: calc(90% - 48px);
+        min-height: auto;
+        height: 68dvh;
+    }
+
+    p{
+        padding: 0px 0px;
+    }
+}
+

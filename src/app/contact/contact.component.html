@@ -1,15 +1,15 @@
 <div class="contact">
-    <div class="bubble bottom right" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/contact/bubble-bottom-right.png"></div>
+    <div class="bubble bottom right setIndex" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/contact/bubble-bottom-right.png"></div>
     <div class="contentContactwrapper">
         <div class="contactWrapper">
             <div class="contactColumns" [ngClass]="{'orangeContact': !ThemeColor.currentColorIsBlue}">
-                <div class="contactDescription">
+                <div class="contactDescription" scrollAnimation animationClass="thisAnimationOne">
                     <h3 id="contact">Contact</h3>
                     <p><span class="bold">Got a problem to solve?</span><br>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.
                     <br><br>Need a Frontend developer?<br>
                     <span class="color">Contact me!</span></p>
                 </div>
-                <div class="contactFormWrapper">
+                <div class="contactFormWrapper" scrollAnimation animationClass="thisAnimationopacity">
                     <form (ngSubmit)='onSubmit(ContactForm)' #ContactForm="ngForm">
 
 

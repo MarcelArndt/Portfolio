@@ -2,10 +2,10 @@
     <div class="shape shape-above"><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/aboutme/shape-above.png' : './assets/img/aboutme/shape-above-orange.png'"></div>
     <div class="bubble bottom right" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/hero-right-bubble-violet.png"></div>
     <div class="bubble aboutMeBubleLeft left" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/hero-left-bubble-cyan.png"></div>
-    <div class="profilPicture"><img src="./assets/img/aboutme/person.png"></div>
-    <div [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}" class="AboutMeWrapper" scrollAnimation animationClass="thisBackgroundClass">
+    <div class="profilPicture" scrollAnimation animationClass="thisAnimationopacity"><img src="./assets/img/aboutme/person.png"></div>
+    <div [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}" class="AboutMeWrapper noneopacity" scrollAnimation animationClass="thisAnimationOne">
         <h3 [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}">About Me</h3>
-        <div id="AboutMeText" [ngClass]="animationClass"><p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}">{{displayTextBox}}</p></div>
+        <div id="AboutMeText"><p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}">{{displayTextBox}}</p></div>
         <nav [ngClass]="{'orangeIconButtenAboutMe': !ThemeColor.currentColorIsBlue}" class="AboutMeMenuBar">
             <ul> 
                 <li [ngClass]="{'active': activeTextBoxIndex === 0}"><img (click)="enbaleTextBox(0)" src="./assets/img/aboutme/nav/me-icon.svg"></li>

@@ -40,7 +40,6 @@
     position: relative;
     width: calc(75% - 48px);
     min-height: 75dvh;
-    max-height: 75dvh;
     background-color: #E1E4E8;
     border: 24px solid #E1E4E8;
     border-radius: 32px;
@@ -214,6 +213,19 @@ h2{
         a{
             color: #EE790E;
         }
+    }
+}
+
+
+@media (max-width: 516px){
+    .lightboxWrapper{
+        width: calc(90% - 48px);
+        min-height: auto;
+        height: 68dvh;
+    }
+
+    p{
+        padding: 0px 0px;
     }
 }
 
