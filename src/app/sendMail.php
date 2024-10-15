@@ -16,9 +16,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
     
             $email = $params->email;
             $name = $params->name;
-            $message = $params->message;
+            $message = $params->text;
     
-            $recipient = 'DEINE@MAIL.de';  
+            $recipient = 'info@arndt-marcel.de';  
             $subject = "Contact From <$email>";
             $message = "From:" . $name . "<br>" . $message ;
     
@@ -27,7 +27,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
+            $headers[] = "From: noreply@arndt-marcel.de";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;
