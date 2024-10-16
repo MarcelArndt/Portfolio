@@ -57,9 +57,7 @@ export class ContactComponent {
           },
           error: (error) => {
             this.successComponent.setSuccess(false);
-            console.error(error);
           },
-          complete: () => console.info('send post complete'),
         });
     } else {
       this.successComponent.setSuccess(false);

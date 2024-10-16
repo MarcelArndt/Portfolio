@@ -11,7 +11,7 @@ export class TranslationsService {
   text = {
     german: {
             navigation:['Über Mich','Skills','Projekte','Kontakt'],
-            headline:['Erstellen von nahtloser,<br>digitalen Erfahrungen.','Deutscher Frontend Entwickler', `Trete in Kontakt`],
+            headline:['Erstellen von nahtloser,<br>digitalen Erfahrungen.','Deutscher Frontend Entwickler<br>- Marcel Arndt -', `Trete in Kontakt`],
             aboutMe:['Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus Bad Salzuflen. Motiviert von den grenzenlosen Möglichkeiten in der IT bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.',
                      'Da ich hinsichtlich meiner Arbeitsumgebung flexibel bin, kann ich sowohl vor Ort in Bad Salzuflen, Bielefeld oder im anderem Umland sowie auch remote effektiv arbeiten.',
                      'Ich bin aufgeschlossen und suche immer nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.',

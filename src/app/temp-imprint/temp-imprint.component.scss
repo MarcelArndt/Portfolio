@@ -1,0 +1,136 @@
+@import '../../styles.scss';
+
+*{
+    margin: 0px;
+}
+
+.MainWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.ContentWrapper{
+    background-color: #E1E4E8;
+    position: relative;
+    width: 75%;
+    height: 100%;
+    max-width: 1440px;
+    
+}
+
+strong, h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    color: #7E0EEE;
+    margin-top: 24px;
+}
+
+h1{
+    margin-bottom: 48px;
+}
+
+a{
+    color: #7E0EEE;
+    &:hover{
+        cursor: pointer;
+        color: #85E8DD;;
+    }
+}
+
+.textContainer{
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 188px;
+    margin-top: 146px;
+    width: 55%;
+    text-align: center;
+}
+
+.coverBottom{
+
+    height: 100%;
+    img{
+
+        z-index: 0;
+        object-fit: cover;
+        user-select: none;
+    }
+}
+
+.bubble {
+    z-index: 0;
+    user-select: none;
+}
+
+.bottom{
+    bottom: 3px;
+}
+
+.insideWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p{
+    z-index: 999;
+}
+
+
+@media (max-width: 1900px) {
+    .ContentWrapper{
+        width: 85%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .ContentWrapper{
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px){
+    .textContainer{
+        width: 85%;
+    }
+}
+
+
+@media (max-width: 556px){
+    .textContainer{
+        margin-top: 188px;
+    }
+}
+
+.wrapperOrangeTheme{
+    color:#360303;
+    p{
+        color:#360303;
+    }
+
+    strong, h4, h1{
+        color: $orange;
+    }
+
+    a{
+        color: $orange;
+        &:hover{
+            color: white; 
+        }
+    }
+
+}
+
+.getHight{
+    width: 100%;
+    margin-bottom: -30px;
+    height: 100%;
+    background-color: #7E0EEE;
+}

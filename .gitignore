@@ -10,7 +10,7 @@
 /node_modules
 npm-debug.log
 yarn-error.log
-./ToDo.txt
+ToDo.txt
 
 # IDEs and editors
 .idea/

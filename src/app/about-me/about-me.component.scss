@@ -18,10 +18,16 @@
     right: 1%;
     bottom: 0px;
     height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
     img{
+        object-position: bottom;
         object-fit: contain;
         height: 100%;
-        width: auto;
+        max-height: 609px;
+        aspect-ratio: 1 / 1;
     }
 }
 
@@ -82,7 +88,7 @@
 }
 
 
-@media (max-width: 1190px){
+@media (max-width: 1250px){
 
     .profilPicture{
         position: static;
@@ -177,10 +183,24 @@
     }
     
     .AboutMeText{
+
         font-size: 18px;
         min-height: 236;
     }
+
+    .AboutMeWrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 85dvh;
+
+      h3{
+        margin-top: 0px;
+      }
+    }
 }
+
 
 .thisListAnimation{
   li {

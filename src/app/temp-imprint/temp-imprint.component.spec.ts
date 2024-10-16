@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactComponent } from './contact.component';
+import { TempImprintComponent } from './temp-imprint.component';
 
-describe('ContactComponent', () => {
-  let component: ContactComponent;
-  let fixture: ComponentFixture<ContactComponent>;
+describe('TempImprintComponent', () => {
+  let component: TempImprintComponent;
+  let fixture: ComponentFixture<TempImprintComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactComponent]
+      imports: [TempImprintComponent]
     })
     .compileComponents();
-    fixture = TestBed.createComponent(ContactComponent);
+
+    fixture = TestBed.createComponent(TempImprintComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
