@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ColorSwapService } from '../color-swap.service';
 import { ImpressumComponent } from '../impressum/impressum.component';
 import { DatenschutzComponent } from '../datenschutz/datenschutz.component';
+import { TranslationsService } from '../translations.service';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -13,7 +15,13 @@ import { DatenschutzComponent } from '../datenschutz/datenschutz.component';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  constructor(public ThemeColor: ColorSwapService){
 
+  public currentTexte:string[] = [];
+  private languageSubscription: Subscription;
+
+  constructor(public ThemeColor: ColorSwapService, public texte:TranslationsService){
+    this.languageSubscription = this.texte.currentLanguage.subscribe(lang => {
+      this.currentTexte = this.texte.getTexts(lang).footer;
+    });
   }
 }

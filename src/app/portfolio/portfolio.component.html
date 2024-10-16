@@ -6,7 +6,7 @@
     <div class="portfolioWrapper set_infront">
         <div class="headlineWrapper" scrollAnimation animationClass="thisAnimationopacity">
             <h3 [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}">Portfolio</h3>
-            <p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}">Explore a selection of my work here - Interact<br>with projects to see my skills in action.</p>
+            <p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}" [innerHTML]="currentTexte[0]">Explore a selection of my work here - Interact<br>with projects to see my skills in action.</p>
         </div>
 
         <div class="projectWrapper">
@@ -18,10 +18,10 @@
                     <img class="position_one" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-1.png' : './assets/img/portfolio/shape-project-1-orange.png'">
                 </div>
             </div> 
-            <div class="projectText " [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation animationClass="thisAnimationOne">
-                <h5>Project Join</h5>
-                <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</p>
-                <span>JavaScript | HTML | CSS</span>
+            <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation animationClass="thisAnimationOne">
+                <h5 [innerHTML]="projectOne[0]"></h5>
+                <p [innerHTML]="projectOne[1]">Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</p>
+                <span [innerHTML]="projectOne[2]">JavaScript | HTML | CSS</span>
                 <div class="buttonContainer" scrollAnimation animationClass="thisAnimationTwo">
                     <a href="https://arndt-marcel.de/join" target="_blank" class="button colorViolet">Live Demo</a> 
                     <a class="button outlineButton" href="https://github.com/MarcelArndt/Project-Join" target="_blank">On GitHub</a>
@@ -37,9 +37,9 @@
                 </div> 
             </div>
             <div class="projectText " [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation animationClass="thisAnimationOne">
-                <h5>Phantom Forest</h5>
-                <p>A simple Jump-and-Run game based on an object-oriented approach. Help your Hero to fight against any Evil in the nearest forest.</p>
-                <span>JavaScript | HTML | CSS</span>
+                <h5 [innerHTML]="projectTwo[0]">Phantom Forest</h5>
+                <p [innerHTML]="projectTwo[1]">A simple Jump-and-Run game based on an object-oriented approach. Help your Hero to fight against any Evil in the nearest forest.</p>
+                <span [innerHTML]="projectTwo[2]">JavaScript | HTML | CSS</span>
                 <div class="buttonContainer" scrollAnimation animationClass="thisAnimationTwo">
                     <a href="https://arndt-marcel.de/phantom-forest" target="_blank" class="button colorViolet">Live Demo</a> 
                     <a class="button outlineButton" href="https://github.com/MarcelArndt/Project-Platformer" target="_blank">On GitHub</a>
@@ -55,9 +55,9 @@
                 </div> 
             </div>
             <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation animationClass="thisAnimationOne">
-                <h5>Pokédex</h5>
-                <p>Based on the PokéAPI - A simple library that provides and catalogues pokemon information.</p>
-                <span>JavaScript | HTML | CSS | API</span>
+                <h5 [innerHTML]="projectThree[0]">Pokédex</h5>
+                <p [innerHTML]="projectThree[1]">Based on the PokéAPI - A simple library that provides and catalogues pokemon information.</p>
+                <span [innerHTML]="projectThree[2]">JavaScript | HTML | CSS | API</span>
                 <div class="buttonContainer" scrollAnimation animationClass="thisAnimationTwo">
                     <a href="https://arndt-marcel.de/pokedex" target="_blank"class="button colorViolet">Live Demo</a> 
                     <a class="button outlineButton" href="https://github.com/MarcelArndt/Pokedex" target="_blank">On GitHub</a>

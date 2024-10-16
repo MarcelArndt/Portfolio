@@ -6,10 +6,11 @@
         <div class="contactWrapper">
             <div class="contactColumns" [ngClass]="{'orangeContact': !ThemeColor.currentColorIsBlue}">
                 <div class="contactDescription" scrollAnimation animationClass="thisAnimationOne">
-                    <h3 id="contact">Contact</h3>
-                    <p><span class="bold">Got a problem to solve?</span><br>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.
-                    <br><br>Need a Frontend developer?<br>
-                    <span class="color">Contact me!</span></p>
+                    <h3 id="contact" [innerHTML]="currentTexte[0]">Contact</h3>
+                    <p class="bold" [innerHTML]="currentTexte[1]">Got a problem to solve?</p>
+                    <p [innerHTML]="currentTexte[2]">Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
+                    <p class="spaceTop" [innerHTML]="currentTexte[3]">Need a Frontend developer?</p>
+                    <p class="color spaceTop" [innerHTML]="currentTexte[4]">Contact me!</p>
                 </div>
                 <div class="contactFormWrapper" scrollAnimation animationClass="thisAnimationopacity">
                     <form (ngSubmit)='onSubmit(ContactForm)' #ContactForm="ngForm">
@@ -18,21 +19,21 @@
                         @if (!name.valid && name.touched){
                             <span>Please enter a correct name!</span>
                         }
-                        <input #name="ngModel" [(ngModel)]="currentContact.name" name="name" placeholder="Dein Name" id="contactName" required minlength="3">
+                        <input #name="ngModel" [(ngModel)]="currentContact.name" name="name" [placeholder]="currentTexte[5]" id="contactName" required minlength="3">
 
 
                         @if (!email.valid && email.touched){
                             <span>Please enter a correct Email address!</span>
                         }
-                        <input #email="ngModel" [(ngModel)]="currentContact.email" name="email" placeholder="Deine E-Mail" id="contactMail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                        <input #email="ngModel" [(ngModel)]="currentContact.email" name="email" [placeholder]="currentTexte[6]" id="contactMail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
 
                         @if (!message.valid && message.touched){
                             <span>Please enter a Message</span>
                         }
-                        <textarea  #message="ngModel" [(ngModel)]="currentContact.text" name="text" placeholder="Deine Nachricht" id="contactText" minlength="3" required></textarea>
+                        <textarea  #message="ngModel" [(ngModel)]="currentContact.text" name="text" [placeholder]="currentTexte[7]" id="contactText" minlength="3" required></textarea>
 
-                        <button class="button colorViolet">Send Message</button>
+                        <button class="button colorViolet" [innerHTML]="currentTexte[8]">Send Message</button>
                     </form>
                 </div>
             </div>

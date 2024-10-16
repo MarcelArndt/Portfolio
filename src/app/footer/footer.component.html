@@ -13,9 +13,9 @@
             <nav class="footerNav" [ngClass]="{'footerNavOrange': !ThemeColor.currentColorIsBlue}">
                 <p>© Marcel Arndt 2024</p>
                 <ul>
-                    <a href="#start"><li>Startseite</li></a>
-                    <a (click)="lightbox.openLightbox()"><li>Impressum</li></a>
-                    <a (click)="datenschutz.openLightbox()"><li>Datenschutz</li></a>
+                    <a href="#start"><li [innerHTML]="currentTexte[0]">Startseite</li></a>
+                    <a (click)="lightbox.openLightbox()"><li [innerHTML]="currentTexte[1]">Impressum</li></a>
+                    <a (click)="datenschutz.openLightbox()"><li [innerHTML]="currentTexte[2]">Datenschutz</li></a>
                 </ul>
             </nav>
 
@@ -23,7 +23,7 @@
                 <ul>
                     <a href="https://github.com/MarcelArndt" target="_blank"><li><img src="./assets/img/github.svg"></li></a>
                     <a href="mailto:info@arndt-marcel.de"><li><img src="./assets/img/e_mail.svg"></li></a>
-                    <a><li><img src="./assets/img/linkin.svg"></li></a>
+                    <a href="https://www.linkedin.com/in/marcel-arndt-8322b2333/" target="_blank"><li><img src="./assets/img/linkin.svg"></li></a>
                 </ul>
             </nav>
 

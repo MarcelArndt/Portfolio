@@ -406,6 +406,10 @@
 
 @media (max-width: 556px){
 
+    .Navbar{
+        width: 100%;
+    }
+
     .MainNavBar{
         width: 100%;
     }
@@ -418,7 +422,15 @@
         align-items: center;
     }
 
+    .logo{
+        padding-top: 48px;
+        padding-bottom: 24px;
+        height: 86px;
+        min-width: 86px;
+    }
+
     .mobilNav{
+        width: 100%;
         display: flex;
         margin-right: 0px;
     }
@@ -429,7 +441,7 @@
         justify-content: center;
         width: 100%;
         gap: 15%;
-        margin-top: 16px;
+    
         .last-child{
              margin: 0px 0px 0px 0px!important;
         }

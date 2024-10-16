@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { ColorSwapService } from '../../color-swap.service';
 import { TranslationsService } from '../../translations.service';
@@ -103,4 +103,23 @@ export class NavBarComponent {
     this.texte.switchOnClick();
   }
 
+  closeMenues(){
+    this.isColorNavOn = false;
+    this.isMobilNavOn = false;
+    this.hideMobilNavigation = true;
+    setTimeout(() => {
+      this.setMobilOff = true
+      this.hideNavigation = true
+    }, 325);
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
+    const targetElement = event.target as HTMLElement;
+    if (this.isColorNavOn && !targetElement.closest('.colorSwitchButton') || this.isMobilNavOn && !targetElement.closest('.mobile-menu')) {
+      this.closeMenues();
+    }
+  }
+
+  
 }

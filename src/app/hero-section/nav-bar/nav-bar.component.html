@@ -1,15 +1,15 @@
-<div class="NavbarWrapper">
+<div class="NavbarWrapper" (click)="closeMenues()">
     <div class="Navbar">
         <div class="logo"><a href="#start"><img src="./assets/img/logo.svg"></a></div>
         <nav class="MainNavBar">
             <ul class="mainNav">
-                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#aboutMe" [innerHTML]="currentTexte[0]"><li>Über mich</li></a>
-                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#skills" [innerHTML]="currentTexte[1]"><li>Skills</li></a>
-                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#portfolio" [innerHTML]="currentTexte[2]"><li>Projects</li></a>
-                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#contact" [innerHTML]="currentTexte[3]"><li >Contact</li></a>
+                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#aboutMe"><li [innerHTML]="currentTexte[0]"></li></a>
+                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#skills"><li [innerHTML]="currentTexte[1]"></li></a>
+                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#portfolio"><li [innerHTML]="currentTexte[2]"></li></a>
+                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#contact"><li [innerHTML]="currentTexte[3]"></li></a>
                 <li>
                     <nav class="mobilNav">
-                    <div><img (click)="toogleMobilNav()" [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" src="./assets/img/mobil-menu.svg"></div>
+                    <div (click)="$event.stopPropagation()"><img (click)="toogleMobilNav()" [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" src="./assets/img/mobil-menu.svg"></div>
                     <div class="hideMobilMenu" [ngClass]="{
                         'orangeBefore': !ThemeColor.currentColorIsBlue,
                         'disable': setMobilOff,
@@ -20,15 +20,15 @@
                             'growMobilMenu': !hideMobilNavigation,
                             'orangeDarkBackground': !ThemeColor.currentColorIsBlue,
                         }">
-                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#aboutMe" [innerHTML]="currentTexte[0]"><li>About Me</li></a>
-                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#skills" [innerHTML]="currentTexte[1]"><li>Skills</li></a>
-                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#portfolio" [innerHTML]="currentTexte[2]"><li>Projects</li></a>
-                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#contact" [innerHTML]="currentTexte[3]"><li>Contact</li></a>
+                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#aboutMe"><li [innerHTML]="currentTexte[0]"></li></a>
+                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#skills"><li [innerHTML]="currentTexte[1]"></li></a>
+                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#portfolio"><li [innerHTML]="currentTexte[2]"></li></a>
+                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#contact"><li [innerHTML]="currentTexte[3]"></li></a>
                         </ul>
                     </div>
                 </nav>
                 </li>
-                <li class="colorSwitchButton" (click)="toggleColorNav()"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" src="./assets/img/hero/switch-color.svg"><div class="hiddenSwitch" [ngClass]="hideNavigation  ? 'disable' : 'enable'"><div class="shape"  [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeBox-Shadow'"></div><div class="boardwalk" [ngClass]="{
+                <li (click)="$event.stopPropagation()" class="colorSwitchButton" (click)="toggleColorNav()"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" src="./assets/img/hero/switch-color.svg"><div class="hiddenSwitch" [ngClass]="hideNavigation  ? 'disable' : 'enable'"><div class="shape"  [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeBox-Shadow'"></div><div class="boardwalk" [ngClass]="{
                     'orangeDarkBackground': !ThemeColor.currentColorIsBlue,
                     'animationfadeIn': isColorNavOn,
                     'animationfadeOut': !isColorNavOn
@@ -36,12 +36,11 @@
                     <nav class="colornav" [ngClass]="{
                         'animationshowMenu': isColorNavOn,
                         'animationhideMenu': !isColorNavOn,
-                        'orangeBorder': !ThemeColor.currentColorIsBlue,
                         
                     }">
                     <div (click)="switchToBlueTheme()" class="blue active">
                     </div>
-                    <div (click)="switchToOrangeTheme()" class="orange" >
+                    <div (click)="switchToOrangeTheme()" class="orange">
                     </div>
                     </nav>
                 </div></div></li>

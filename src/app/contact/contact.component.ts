@@ -6,6 +6,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ScrollAnimationDirective } from '../scroll-animation.directive';
 import { SuccessSubmitComponent } from './success-submit/success-submit.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -15,12 +16,17 @@ import { SuccessSubmitComponent } from './success-submit/success-submit.componen
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  constructor(
-    public ThemeColor: ColorSwapService,
-    public Language: TranslationsService
-  ){
 
+  public currentTexte:string[] = [];
+  private languageSubscription: Subscription;
+
+  constructor(
+    public ThemeColor: ColorSwapService, public texte:TranslationsService){
+    this.languageSubscription = this.texte.currentLanguage.subscribe(lang => {
+      this.currentTexte = this.texte.getTexts(lang).contact;
+    });
   }
+
   @ViewChild('success') successComponent!: SuccessSubmitComponent;
   http = inject(HttpClient);
 
@@ -42,7 +48,6 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-
     if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.currentContact))
         .subscribe({
