@@ -2,7 +2,7 @@ import { Component, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { ColorSwapService } from '../../color-swap.service';
 import { TranslationsService } from '../../translations.service';
-
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
@@ -14,11 +14,18 @@ import { TranslationsService } from '../../translations.service';
 
 
 export class NavBarComponent {
+
+  public currentTexte:string[] = [];
+  private languageSubscription: Subscription;
+
   constructor(
     public ThemeColor: ColorSwapService, 
     private renderer: Renderer2, 
-    public Language: TranslationsService
-  ) {}
+    public texte:TranslationsService){
+      this.languageSubscription = this.texte.currentLanguage.subscribe(lang => {
+        this.currentTexte = this.texte.getTexts(lang).navigation;
+      });
+    }
 
   public currentLanguage:string = 'german';
   isColorNavOn = false;
@@ -93,14 +100,7 @@ export class NavBarComponent {
   }
 
   switchLanguage(){
-    this.Language.isCurrentLanguageEnglish = !this.Language.isCurrentLanguageEnglish;
-    if(!this.Language.isCurrentLanguageEnglish){
-      this.currentLanguage = "german";
-    } else {
-      this.currentLanguage = "english";
-    }
+    this.texte.switchOnClick();
   }
-
-
 
 }

@@ -2,6 +2,8 @@ import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColorSwapService } from '../color-swap.service';
 import { ScrollAnimationDirective } from '../scroll-animation.directive';
+import { Subscription } from 'rxjs';
+import { TranslationsService } from '../translations.service';
 
 @Component({
   selector: 'app-about-me',
@@ -12,13 +14,23 @@ import { ScrollAnimationDirective } from '../scroll-animation.directive';
 
 })
 export class AboutMeComponent {
-  constructor(public ThemeColor: ColorSwapService){}
-  text:string[] = [
-    "Hi, I’m a german speaking Frontend Developer based near Munich. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
-    "Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.",
-    "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
-    "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
-  ];
+  public currentTexte:string[] = [];
+  private languageSubscription: Subscription;
+  constructor(public ThemeColor: ColorSwapService, public texte:TranslationsService){
+    this.languageSubscription = this.texte.currentLanguage.subscribe(lang => {
+      this.updateTexts(lang);
+    });
+    this.updateTexts('german');
+  }
+
+  updateTexts(lang: 'german' | 'english') {
+    const texts = this.texte.getTexts(lang).aboutMe;
+    this.text = texts;
+    this.displayTextBox = this.text[this.activeTextBoxIndex]; 
+  }
+
+
+  text:string[] = [];
 
   animationClass: string = 'AboutMeText';
   displayTextBox:string = this.text[0];

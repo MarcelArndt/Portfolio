@@ -9,16 +9,16 @@
     <div class="bubble top left" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/hero/hero-top-bubble-violet.png"></div>
 
     <div class="HeroWrapper">
-        <h1 [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeColor'" scrollAnimation animationClass="thisAnimationHeroOne">Crafting seamless<br>digital experiences.</h1>
-        <h2 [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkText'" scrollAnimation animationClass="thisAnimationHeroTwo">A German Frontend Developer<br>
+        <h1 [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeColor'" scrollAnimation animationClass="thisAnimationHeroOne" [innerHTML]="currentTexte[0]"></h1>
+        <h2 [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkText'" scrollAnimation animationClass="thisAnimationHeroTwo" [innerHTML]="currentTexte[1]"><br>
         <span class="TextViolet" [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeColor'">- Marcel Arndt -</span></h2>
-        <a class="button colorViolet heroButton"  [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'backgroundOrange orangeButtonHover'" scrollAnimation animationClass="thisAnimationHeroThree">Lets Talk !</a>
+        <a href="#contact" class="button colorViolet heroButton"  [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'backgroundOrange orangeButtonHover'" scrollAnimation animationClass="thisAnimationHeroThree" [innerHTML]="currentTexte[2]"></a>
     </div>
     <div class="HeroBottomNavbarWrapper">
         <nav class="IconBar">
             <ul>
                 <li><a href="https://github.com/MarcelArndt" target="_blank"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'filterToOrange'" src="./assets/img/github.svg"></a></li>
-                <li><a><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'filterToOrange'" src="./assets/img/e_mail.svg"></a></li>
+                <li><a href="mailto:info@arndt-marcel.de"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'filterToOrange'" src="./assets/img/e_mail.svg"></a></li>
                 <li><a><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'filterToOrange'" src="./assets/img/linkin.svg"></a></li>
             </ul>
         </nav>

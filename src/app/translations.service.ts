@@ -1,26 +1,28 @@
 import { Injectable } from '@angular/core';
-
+import { BehaviorSubject } from 'rxjs';
+type Language = 'german' | 'english';
 @Injectable({
   providedIn: 'root'
+
 })
 export class TranslationsService {
 
   constructor() { }
-  isCurrentLanguageEnglish:boolean = false;
   text = {
     german: {
             navigation:['Über Mich','Skills','Projekte','Kontakt'],
-            headline:['Erstellen von nahtloser,<br>digitalen Erfahrungen.','Deutscher Frontend Entwickler<br>- Marcel Arndt -', `Trete in Kontakt`],
-            aboutMe:['Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Bad Salzuflen. Motiviert von den grenzenlosen Möglichkeiten in der IT bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.',
+            headline:['Erstellen von nahtloser,<br>digitalen Erfahrungen.','Deutscher Frontend Entwickler', `Trete in Kontakt`],
+            aboutMe:['Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus Bad Salzuflen. Motiviert von den grenzenlosen Möglichkeiten in der IT bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.',
                      'Da ich hinsichtlich meiner Arbeitsumgebung flexibel bin, kann ich sowohl vor Ort in Bad Salzuflen, Bielefeld oder im anderem Umland sowie auch remote effektiv arbeiten.',
                      'Ich bin aufgeschlossen und suche immer nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.',
-                     'In dem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben - es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.'
+                     'In dem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben - es ist eine kreative Form der Problemlösung. Komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu formen ist meine Aufgabe. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen Leben einzuhauchen.'
 
             ],
             skills:['Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.',
                     'Auf der Suche nach anderen Skills?',
                     'Nehmen Sie gerne Kontakt mit mir auf. Ich freue mich darauf, meine bisherigen Kenntnisse zu erweitern.',
-                    'In Kontakt kommen'
+                    'In Kontakt kommen',
+                    'Meine Skills'
             ],
             portfolio:['Entdecken Sie hier eine Auswahl meiner Arbeiten -<br> interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.',
               {name: 'Project Join',
@@ -38,8 +40,9 @@ export class TranslationsService {
 
             ],
             contact:['Sie haben ein Problem zu lösen?','Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.<br><br>Benötigen Sie einen Frontend-Entwickler?', 'Kontaktiere Mich!', "Dein Name", "Deine E-Mail", "Deine Nachricht", "Nachricht senden"],
-            footer:[],
-            impressum:[],
+            footer:['texte'],
+            impressum:['texte'],
+            succesEmail:['E-Mail erfolgreich versendet', 'Deine E-Mail ist auf dem Weg zu mir. Schön von dir zu hören. Ich werde so schnell wir mir möglich ist bei dir melden.', 'Email wurde nicht versendet!', 'Oh nein! Da lief wohl etwas schief. Bitte überprüfe nochmal deine Eingaben.', 'Fenster schließen'],
     },
     english: {
       navigation:['About me','Skills','Projects','Contact'],
@@ -52,7 +55,8 @@ export class TranslationsService {
       skills:['My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.',
               'Looking for another skill?',
               'Feel free to contact me. I look forward to expanding on my previous knowledge.',
-              'Get in touch'
+              'Get in touch',
+              'My Skills'
       ],
       portfolio:['Explore a selection of my work here -<br> Interact with projects to see my skills in action.',
               {name: 'Project Join',
@@ -69,20 +73,27 @@ export class TranslationsService {
               },
       ],
       contact:['Got a problem to solve?','Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.<br><br>Need a Frontend developer?', 'Contact me!', "Your Name", "Your E-Mail", "Your Message", "Send Massage"],
-      footer:[],
-      impressum:[],
+      footer:['texte'],
+      impressum:['texte'],
+      succesEmail:['E-Mail successfully Submitted', 'Your E-Mail is right on the way to me. Glad to hear from you. I am working hard for it to write your back as soon ans possible.', 'Email not Submitted!', 'Oh no! something went wrong. Please check your fields.', 'close Windows'],
     }
   }
 
-  LanguagePath = this.text.german;
-  setLanguagePath(){
-    this.LanguagePath = this.isCurrentLanguageEnglish ? this.text.english : this.text.german;
+  private language = new BehaviorSubject<'german' | 'english'>('german');
+  currentLanguage = this.language.asObservable();
+  isCurrentLanguageEnglish:boolean = false;
+
+  switchLanguage(lang: 'german' | 'english') {
+    this.language.next(lang);
   }
 
-  getText(categories:string, index:number, subCategories:string = ""){
-    if(subCategories != ""){
-      return 'this.LanguagePath' + '.' + categories + `[${index}]` + '.' + subCategories
-    }
-    return 'this.LanguagePath' + '.' + categories + `[${index}]`
+  getTexts(lang: 'german' | 'english') {
+    return this.text[lang];
   }
+
+  switchOnClick(){
+    this.isCurrentLanguageEnglish = !this.isCurrentLanguageEnglish;
+    this.switchLanguage(this.isCurrentLanguageEnglish ? 'english' : 'german');
+  }
+
 }

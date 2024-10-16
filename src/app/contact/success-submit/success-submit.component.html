@@ -1,0 +1,9 @@
+<div class="lightbox" *ngIf="isLightboxOpen" [ngClass]="{'fadeContenIn': isClosingAnimation, 'fadeContenOut': !isClosingAnimation, 'orangeTheme' : !ThemeColor.currentColorIsBlue}" (click)="closeLightbox()">
+    <div class="lightboxWrapper" [ngClass]="{'fadeOutBox': isClosingAnimation, 'fadeInBox': !isClosingAnimation}" (click)="$event.stopPropagation()">
+        <div class="lightboxContent">
+            <h1 [innerHTML]="currentMessage[0]">E-mail erfolgreich versendet</h1>
+            <p [innerHTML]="currentMessage[1]">Deine E-Mail ist auf dem Weg zu mir. Schön von dir zu hören.<br>Ich werde so schnell wir mir möglich ist bei dir melden.</p>
+            <div (click)="closeLightbox()" class="button" [innerHTML]="currentMessage[2]">Close Windows</div>
+        </div>
+    </div>
+</div>

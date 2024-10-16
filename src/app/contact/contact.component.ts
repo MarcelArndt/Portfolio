@@ -1,15 +1,16 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewChild  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColorSwapService } from '../color-swap.service';
 import { TranslationsService } from '../translations.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ScrollAnimationDirective } from '../scroll-animation.directive';
+import { SuccessSubmitComponent } from './success-submit/success-submit.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, ScrollAnimationDirective  ],
+  imports: [CommonModule, FormsModule, ScrollAnimationDirective, SuccessSubmitComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -20,8 +21,7 @@ export class ContactComponent {
   ){
 
   }
-
-
+  @ViewChild('success') successComponent!: SuccessSubmitComponent;
   http = inject(HttpClient);
 
   post = {
@@ -41,21 +41,24 @@ export class ContactComponent {
     text: "",
   };
 
-
   onSubmit(ngForm: NgForm) {
+
     if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.currentContact))
         .subscribe({
           next: (response) => {
-
+            this.successComponent.setSuccess(true);
             ngForm.resetForm();
           },
           error: (error) => {
+            this.successComponent.setSuccess(false);
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } 
+    } else {
+      this.successComponent.setSuccess(false);
+    }
   }
 
 }

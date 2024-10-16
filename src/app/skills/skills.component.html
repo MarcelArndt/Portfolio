@@ -5,11 +5,11 @@
                 <div class="blueBG" [ngClass]="{'yellowBackground': !ThemeColor.currentColorIsBlue}">
                         <div class="overflowBox"><div class="shape right skillsTransition"><img [src]="ThemeColor.currentColorIsBlue ? './assets/img/skills/shape-right.png' : './assets/img/skills/shape-right-orange.png'"></div></div>
                         <div class="TextWrapper" scrollAnimation animationClass="thisAnimationOne">
-                        <h3 class="bigScreen" [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}">My Skills</h3>
-                        <p class="whiteText">My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.
-                        <br><br><h4 class="boldText whiteText">Looking for another skill?</h4>
-                        Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
-                        <a href="#contact" class="button colorViolet" [ngClass]="{'backgroundOrange': !ThemeColor.currentColorIsBlue, 'orangeButtonHover': !ThemeColor.currentColorIsBlue}">Get in Touch</a>
+                        <h3 class="bigScreen" [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}" [innerHTML]="currentTexte[4]">My Skills</h3>
+                        <p class="whiteText" [innerHTML]="currentTexte[0]">My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.
+                        </p><h4 class="boldText whiteText" [innerHTML]="currentTexte[1]">Looking for another skill?</h4>
+                        <p class="whiteText" [innerHTML]="currentTexte[2]">Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+                        <a href="#contact" class="button colorViolet" [ngClass]="{'backgroundOrange': !ThemeColor.currentColorIsBlue, 'orangeButtonHover': !ThemeColor.currentColorIsBlue}" [innerHTML]="currentTexte[3]">Get in Touch</a>
                         </div>
                         <hr>
                         <nav class="skillsLogoWrapper" [ngClass]="{'orangeHoverEffektSkills': !ThemeColor.currentColorIsBlue}" scrollAnimation animationClass="thisListAnimation">

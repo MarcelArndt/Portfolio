@@ -3,10 +3,10 @@
         <div class="logo"><a href="#start"><img src="./assets/img/logo.svg"></a></div>
         <nav class="MainNavBar">
             <ul class="mainNav">
-                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#aboutMe"><li>Über mich</li></a>
-                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#skills"><li>Skills</li></a>
-                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#portfolio"><li>Projects</li></a>
-                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#contact"><li >Contact</li></a>
+                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#aboutMe" [innerHTML]="currentTexte[0]"><li>Über mich</li></a>
+                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#skills" [innerHTML]="currentTexte[1]"><li>Skills</li></a>
+                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#portfolio" [innerHTML]="currentTexte[2]"><li>Projects</li></a>
+                <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#contact" [innerHTML]="currentTexte[3]"><li >Contact</li></a>
                 <li>
                     <nav class="mobilNav">
                     <div><img (click)="toogleMobilNav()" [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" src="./assets/img/mobil-menu.svg"></div>
@@ -20,10 +20,10 @@
                             'growMobilMenu': !hideMobilNavigation,
                             'orangeDarkBackground': !ThemeColor.currentColorIsBlue,
                         }">
-                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#aboutMe"><li>About Me</li></a>
-                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#skills"><li>Skills</li></a>
-                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#portfolio"><li>Projects</li></a>
-                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#contact"><li>Contact</li></a>
+                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#aboutMe" [innerHTML]="currentTexte[0]"><li>About Me</li></a>
+                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#skills" [innerHTML]="currentTexte[1]"><li>Skills</li></a>
+                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#portfolio" [innerHTML]="currentTexte[2]"><li>Projects</li></a>
+                            <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" href="#contact" [innerHTML]="currentTexte[3]"><li>Contact</li></a>
                         </ul>
                     </div>
                 </nav>
@@ -45,7 +45,7 @@
                     </div>
                     </nav>
                 </div></div></li>
-                <a class="last-child"><li class="iconsMenuSize"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" [src]="Language.isCurrentLanguageEnglish ? './assets/img/english.svg' : './assets/img/german.svg'" (click)='switchLanguage()'></li></a>
+                <a class="last-child"><li class="iconsMenuSize"><img [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeDarkFilter'" [src]="texte.isCurrentLanguageEnglish ? './assets/img/english.svg' : './assets/img/german.svg'" (click)='switchLanguage()'></li></a>
             </ul>
         </nav>
     </div>
