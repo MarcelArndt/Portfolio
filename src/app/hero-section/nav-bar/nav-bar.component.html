@@ -1,6 +1,10 @@
-<div class="NavbarWrapper" (click)="closeMenues()">
+<div class="NavbarWrapper " (click)="closeMenues()" [ngClass]="{'makeItSticky': isScrolled}">
+    <div class="backgroundElement">
+        <div class="bubble top right hideElement" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue, 'hideElement' : !isScrolled}"><img src="./assets/img/hero/hero-left-bubble-cyan.png"></div>
+        <div class="bubble top left hideElement" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue, 'hideElement' : !isScrolled}"><img src="./assets/img/hero/hero-top-bubble-violet.png"></div>
+    </div>
     <div class="Navbar">
-        <div class="logo"><a href="#start"><img src="./assets/img/logo.svg"></a></div>
+        <div class="logo" [ngClass]="{'hidelogo' : isScrolled}"><a href="#start"><img src="./assets/img/logo.svg"></a></div>
         <nav class="MainNavBar">
             <ul class="mainNav">
                 <a [ngClass]="ThemeColor.currentColorIsBlue ? '' : 'orangeLink'" class="bigScreen" href="#aboutMe"><li [innerHTML]="currentTexte[0]"></li></a>

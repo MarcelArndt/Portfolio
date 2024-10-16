@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ColorSwapService } from '../../color-swap.service';
 import { TranslationsService } from '../../translations.service';
 import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
@@ -34,6 +35,7 @@ export class NavBarComponent {
   isMobilNavOn = false;
   hideMobilNavigation = true;
   setMobilOff = true;
+  isScrolled = false;
 
 
   toogleMobilNav(){
@@ -121,5 +123,15 @@ export class NavBarComponent {
     }
   }
 
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    let currentScrollPosition = window.scrollY || 0;
+    if (currentScrollPosition > 100) {
+      this.isScrolled = true;
+    } else {
+      this.isScrolled = false;
+    }
+  }
   
 }

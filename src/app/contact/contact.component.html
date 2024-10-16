@@ -1,12 +1,12 @@
 
 <app-success-submit #success></app-success-submit>
-<div class="contact">
+<div id="contact" class="contact">
     <div class="bubble bottom right setIndex" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/contact/bubble-bottom-right.png"></div>
     <div class="contentContactwrapper">
         <div class="contactWrapper">
             <div class="contactColumns" [ngClass]="{'orangeContact': !ThemeColor.currentColorIsBlue}">
                 <div class="contactDescription" scrollAnimation animationClass="thisAnimationOne">
-                    <h3 id="contact" [innerHTML]="currentTexte[0]">Contact</h3>
+                    <h3 [innerHTML]="currentTexte[0]">Contact</h3>
                     <p class="bold" [innerHTML]="currentTexte[1]">Got a problem to solve?</p>
                     <p [innerHTML]="currentTexte[2]">Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
                     <p class="spaceTop" [innerHTML]="currentTexte[3]">Need a Frontend developer?</p>

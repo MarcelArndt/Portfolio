@@ -8,12 +8,13 @@ import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ColorSwapService } from '../color-swap.service';
 import { ImpressumComponent } from '../impressum/impressum.component';
+import { NavBarComponent } from '../hero-section/nav-bar/nav-bar.component';
 
 
 @Component({
   selector: 'app-main-component',
   standalone: true,
-  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, CommonModule, ImpressumComponent],
+  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, CommonModule, ImpressumComponent, NavBarComponent ],
   templateUrl: './main-component.component.html',
   styleUrl: './main-component.component.scss'
 })
