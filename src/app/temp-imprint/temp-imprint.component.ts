@@ -9,6 +9,8 @@ import { FooterComponent } from '../footer/footer.component';
 import { ColorSwapService } from '../color-swap.service';
 import { ImpressumComponent } from '../impressum/impressum.component';
 import { NavBarComponent } from '../hero-section/nav-bar/nav-bar.component';
+import { TranslationsService } from '../translations.service';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -19,6 +21,13 @@ import { NavBarComponent } from '../hero-section/nav-bar/nav-bar.component';
   styleUrl: './temp-imprint.component.scss'
 })
 export class TempImprintComponent {
-  constructor(public ThemeColor: ColorSwapService){
+
+  public currentTexte:string[] = [];
+  private languageSubscription: Subscription;
+
+  constructor(public ThemeColor: ColorSwapService, public texte:TranslationsService){
+    this.languageSubscription = this.texte.currentLanguage.subscribe(lang => {
+      this.currentTexte = this.texte.getTexts(lang).impressum;
+    });
   }
 }

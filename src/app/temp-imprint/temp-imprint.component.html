@@ -2,8 +2,7 @@
     <div class="ContentWrapper" [ngClass]="{'wrapperOrangeTheme': !ThemeColor.currentColorIsBlue}">
         <app-nav-bar></app-nav-bar>
         <div class="insideWrapper">
-            <div class="textContainer">
-
+            <div class="textContainer" [innerHTML]="currentTexte[0]">
              
                 <h1>Impressum</h1><p>Angaben gemäß § 5 DDG</p><p>Marcel Arndt <br> 
                     Wilhelm-Raabe-Straße 13<br> 

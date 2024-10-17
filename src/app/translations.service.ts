@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { dataProtectText } from './temp-protect-data/data-protect';
+import { imprintText } from './temp-imprint/imprint';
 type Language = 'german' | 'english';
 @Injectable({
   providedIn: 'root'
@@ -30,7 +32,8 @@ export class TranslationsService {
             projectThree: ['Pokédex','Basierend auf der PokéAPI - einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.', 'JavaScript | HTML | CSS | API'],
             contact:['Kontakt','Sie haben ein Problem zu lösen?','Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen','Benötigen Sie einen Frontend-Entwickler?', 'Kontaktiere Sie Mich!', "Dein Name", "Deine E-Mail", "Deine Nachricht", "Nachricht senden"],
             footer:['Startseite','Impressum','Datenschutz'],
-            impressum:['texte'],
+            impressum:[imprintText[0]],
+            dataprotect:[dataProtectText[0]],
             succesEmail:['E-Mail erfolgreich versendet', 'Deine E-Mail ist auf dem Weg zu mir. Schön von dir zu hören. Ich werde so schnell wir mir möglich ist bei dir melden.', 'Email wurde nicht versendet!', 'Oh nein! Da lief wohl etwas schief. Bitte überprüfe nochmal deine Eingaben.', 'Fenster schließen'],
     },
     english: {
@@ -53,7 +56,8 @@ export class TranslationsService {
       projectThree: ['Pokédex','Based on the PokéAPI - A simple library that provides and catalogues pokemon information.', 'JavaScript | HTML | CSS | API'],
       contact:['Contact','Got a problem to solve?','Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.', 'Need a Frontend developer?', 'Contact me!', "Your Name", "Your E-Mail", "Your Message", "Send Massage"],
       footer:['Home','Imprint', 'Data-Protection'],
-      impressum:['texte'],
+      dataprotect:[dataProtectText[1]],
+      impressum:[imprintText[1]],
       succesEmail:['E-Mail successfully Submitted', 'Your E-Mail is right on the way to me. Glad to hear from you. I am working hard for it to write your back as soon ans possible.', 'Email not Submitted!', 'Oh no! something went wrong. Please check your fields.', 'close Windows'],
     }
   }
