@@ -41,6 +41,9 @@ export class ContactComponent {
     },
   };
 
+  dataProtect: boolean = false;
+  submitted: boolean = false;
+
   currentContact = {
     name: "",
     email: "",
@@ -48,6 +51,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    this.submitted = true;
     if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.currentContact))
         .subscribe({
@@ -63,5 +67,4 @@ export class ContactComponent {
       this.successComponent.setSuccess(false);
     }
   }
-
 }

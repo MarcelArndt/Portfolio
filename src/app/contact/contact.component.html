@@ -15,24 +15,40 @@
                 <div class="contactFormWrapper" scrollAnimation animationClass="thisAnimationopacity">
                     <form (ngSubmit)='onSubmit(ContactForm)' #ContactForm="ngForm">
 
-
-                        @if (!name.valid && name.touched){
+                        <div class="space">
+                        @if (!name.valid && name.touched || !name.valid && submitted){
                             <span>Please enter a correct name!</span>
                         }
+                        </div>
                         <input #name="ngModel" [(ngModel)]="currentContact.name" name="name" [placeholder]="currentTexte[5]" id="contactName" required minlength="3">
 
-
-                        @if (!email.valid && email.touched){
+                        <div class="space">
+                        @if (!email.valid && email.touched || !email.valid && submitted){
                             <span>Please enter a correct Email address!</span>
                         }
+                        </div>
                         <input #email="ngModel" [(ngModel)]="currentContact.email" name="email" [placeholder]="currentTexte[6]" id="contactMail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
-
-                        @if (!message.valid && message.touched){
+                        <div class="space">
+                        @if (!message.valid && message.touched || !message.valid && submitted){
                             <span>Please enter a Message</span>
                         }
+                        </div>
                         <textarea  #message="ngModel" [(ngModel)]="currentContact.text" name="text" [placeholder]="currentTexte[7]" id="contactText" minlength="3" required></textarea>
 
+                        <div class="space">
+                            @if (!checkbox.valid && checkbox.touched || !checkbox.valid && submitted){
+                                <span>Please read Data Protection</span>
+                            }
+                            </div>
+                        <div class="checkbox-Box">
+                            <label for="dataProtect" [innerHTML]="currentTexte[9]"></label><br>
+                            <div class="checkbox-container">
+                                <input class="originCheckbox" #checkbox="ngModel" type="checkbox" id="dataProtect" name="dataProtect" required [(ngModel)]="dataProtect">
+                                <div class="customCheckBox"></div>
+                            </div>
+
+                        </div>
                         <button class="button colorViolet" [innerHTML]="currentTexte[8]">Send Message</button>
                     </form>
                 </div>
