@@ -201,6 +201,11 @@ form{
 }
 
 .orangeContact{
+
+    .customCheckBox{
+        border-color: $orange !important;
+    }
+
     h3{
         color: $orange !important;
     }
@@ -219,6 +224,8 @@ form{
         color: #360303 !important; 
         border: 2px solid  $orange !important;
     }
+
+
 
     textarea{
         color: #360303 !important; 

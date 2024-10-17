@@ -20,7 +20,7 @@
                             <span>Please enter a correct name!</span>
                         }
                         </div>
-                        <input #name="ngModel" [(ngModel)]="currentContact.name" name="name" [placeholder]="currentTexte[5]" id="contactName" required minlength="3">
+                        <input #name="ngModel" [(ngModel)]="currentContact.name" name="name" [placeholder]="currentTexte[5]" id="contactName" required minlength="3" pattern="[A-Za-z]+">
 
                         <div class="space">
                         @if (!email.valid && email.touched || !email.valid && submitted){
@@ -41,7 +41,7 @@
                                 <span>Please read Data Protection</span>
                             }
                             </div>
-                        <div class="checkbox-Box">
+                        <div class="checkbox-Box" >
                             <label for="dataProtect" [innerHTML]="currentTexte[9]"></label><br>
                             <div class="checkbox-container">
                                 <input class="originCheckbox" #checkbox="ngModel" type="checkbox" id="dataProtect" name="dataProtect" required [(ngModel)]="dataProtect">
