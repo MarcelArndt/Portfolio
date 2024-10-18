@@ -143,6 +143,7 @@
                 opacity: 0;
                 font-size: 21px;
                 transition: transform 0.125s ease-in-out, opacity 0.1s ease-in-out, font-size 1s ease-in-out;
+                pointer-events: none;
 
                 &::after{
                     content: "";

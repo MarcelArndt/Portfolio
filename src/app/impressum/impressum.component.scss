@@ -46,14 +46,6 @@
     max-width: calc(1024px - 48px);
 }
 
-.lightboxContent::-webkit-scrollbar{
-    display: none;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: black;
-}
-
 .lightboxContent{
     position: relative;
     flex-direction: column;

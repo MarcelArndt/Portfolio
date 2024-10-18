@@ -93,11 +93,20 @@ export class NavBarComponent {
     this.setBodyBackground();
   }
 
+  ngOnInit(){
+    this.setBodyBackground();
+  }
+
   setBodyBackground(){
+    let htmlElement = document.getElementsByTagName(`html`);
     if(this.ThemeColor.currentColorIsBlue){
       this.renderer.setStyle(document.body, 'background-color', '#040a2e');
+      htmlElement[0].classList.add("blueScrollbar");
+      htmlElement[0].classList.remove("orangeScrollbar");
     } else {
       this.renderer.setStyle(document.body, 'background-color', '#160302');
+      htmlElement[0].classList.add("orangeScrollbar");
+      htmlElement[0].classList.remove("blueScrollbar");
     }
   }
 

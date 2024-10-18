@@ -200,51 +200,7 @@ form{
     }
 }
 
-.orangeContact{
 
-    .customCheckBox{
-        border-color: $orange !important;
-    }
-
-    h3{
-        color: $orange !important;
-    }
-    p{
-        color: #360303 !important;
-        span{
-            color: #360303 !important;
-        }
-
-        .color{
-            color: $orange !important;
-        }
-    }
-
-    input{
-        color: #360303 !important; 
-        border: 2px solid  $orange !important;
-    }
-
-
-
-    textarea{
-        color: #360303 !important; 
-        border: 2px solid  $orange !important;
-    }
-
-    .colorViolet{
-        background-color: $orange !important;
-        color: white;
-        border: 3px solid $orange !important;
-
-        &:hover{
-            background-color: white !important;
-            color: $orange !important;
-            border: 3px solid $orange !important;
-        }
-    }
-
-}
 
 @media (max-width:1914px){
     .contact{
@@ -405,3 +361,90 @@ form{
   .setIndex{
     z-index: 0;
   }
+
+
+  .button:disabled{
+    color: rgb(155, 166, 184);
+    background-color: #292448;
+    border-color: #292448;
+    opacity: 0.5;
+
+    &:hover{
+        color: rgb(155, 166, 184);
+        border-color: #292448;
+        cursor: not-allowed !important;
+    }
+}
+
+  .orangeContact{
+
+    .customCheckBox{
+        border-color: $orange !important;
+        color: $orange !important;
+
+        &::before{
+            color: $orange !important;
+        }
+    }
+
+    h3{
+        color: $orange !important;
+    }
+
+    p{
+        color: #360303 !important;
+        span{
+            color: #360303 !important;
+        }
+
+        .color{
+            color: $orange !important;
+        }
+    }
+
+    label{
+        color: #360303 !important;
+    }
+
+    input{
+        color: #360303 !important; 
+        border: 2px solid  $orange !important;
+    }
+
+    textarea{
+        color: #360303 !important; 
+        border: 2px solid  $orange !important;
+    }
+
+    .colorViolet{
+        background-color: $orange !important;
+        color: white;
+        border: 3px solid $orange !important;
+
+        &:hover{
+            background-color: white !important;
+            color: $orange !important;
+            border: 3px solid $orange !important;
+        }
+    }
+
+    .button:disabled{
+        opacity: 0.5;
+        color: rgb(184, 155, 155);
+        background-color: #483224 !important;
+        border-color: #483224  !important;
+        &:hover{
+            color: rgb(184, 155, 155) !important;
+            border-color: #483224  !important;
+            cursor: not-allowed !important;
+        }
+    }
+
+}
+
+
+
+#contact{
+    outline: none;
+    
+}

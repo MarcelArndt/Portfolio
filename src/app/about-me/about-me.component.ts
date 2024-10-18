@@ -21,6 +21,10 @@ export class AboutMeComponent {
       this.updateTexts(lang);
     });
     this.updateTexts('german');
+    this.languageSubscription = this.texte.currentLanguage.subscribe(lang => {
+      this.currentTexte = this.texte.getTexts(lang).aboutMe;
+    });
+
   }
 
   updateTexts(lang: 'german' | 'english') {
@@ -31,7 +35,6 @@ export class AboutMeComponent {
 
 
   text:string[] = [];
-
   animationClass: string = 'AboutMeText';
   displayTextBox:string = this.text[0];
   activeTextBoxIndex:number = 0;

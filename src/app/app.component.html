@@ -1,1 +1,12 @@
-<router-outlet/>
+<div class="scrollwatcher" [ngClass]="{'orangeGradient': !ThemeColor.currentColorIsBlue}"></div>
+<section class="MainWrapper">
+    <div class="ContentWrapper" [ngClass]="{'wrapperOrangeTheme': !ThemeColor.currentColorIsBlue}">
+
+        <app-nav-bar></app-nav-bar>
+
+        <router-outlet/>
+
+        <app-footer></app-footer>
+
+    </div>
+</section>

@@ -58,6 +58,7 @@ export class ContactComponent {
           next: (response) => {
             this.successComponent.setSuccess(true);
             ngForm.resetForm();
+            this.submitted = false;
           },
           error: (error) => {
             this.successComponent.setSuccess(false);

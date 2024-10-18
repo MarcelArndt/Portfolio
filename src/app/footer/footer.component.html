@@ -13,13 +13,13 @@
             <nav class="footerNav" [ngClass]="{'footerNavOrange': !ThemeColor.currentColorIsBlue}">
                 <p>© Marcel Arndt 2024</p>
                 <ul>
-                    <a href="#start"><li [innerHTML]="currentTexte[0]">Startseite</li></a>
+                    <a [routerLink]="['']"><li [innerHTML]="currentTexte[0]">Startseite</li></a>
                     <!--
                     <a (click)="lightbox.openLightbox()"><li [innerHTML]="currentTexte[1]">Impressum</li></a>
                     <a (click)="datenschutz.openLightbox()"><li [innerHTML]="currentTexte[2]">Datenschutz</li></a>
                     -->
-                    <a href="./imprint"><li [innerHTML]="currentTexte[1]">Impressum</li></a>
-                    <a href="./proctect-data"><li [innerHTML]="currentTexte[2]">Datenschutz</li></a>
+                    <a [routerLink]="['/imprint']"><li [innerHTML]="currentTexte[1]">Impressum</li></a>
+                    <a [routerLink]="['/proctect-data']"><li [innerHTML]="currentTexte[2]">Datenschutz</li></a>
 
                 </ul>
             </nav>

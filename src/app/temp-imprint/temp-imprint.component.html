@@ -1,6 +1,5 @@
-<section class="MainWrapper">
-    <div class="ContentWrapper" [ngClass]="{'wrapperOrangeTheme': !ThemeColor.currentColorIsBlue}">
-        <app-nav-bar></app-nav-bar>
+
+
         <div class="insideWrapper">
             <div class="textContainer" [innerHTML]="currentTexte[0]">
              
@@ -20,8 +19,5 @@
 
             </div>
         </div>
-        <app-footer></app-footer>
         <div class="bubble bottom right coverBottom" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/hero/hero-left-bubble-cyan.png"></div>
         <div class="bubble top left " [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/hero/hero-top-bubble-violet.png"></div>
-    </div>
-</section>
