@@ -20,14 +20,14 @@
                             <span>Please enter a correct name!</span>
                         }
                         </div>
-                        <input #name="ngModel" [(ngModel)]="currentContact.name" name="name" [placeholder]="currentTexte[5]"  required minlength="3" pattern="[A-Za-z_.-\s]+">
+                        <input #name="ngModel" [(ngModel)]="currentContact.name" name="name" [placeholder]="currentTexte[5]"  required minlength="3" pattern="[A-Za-z._\-\s]+">
 
                         <div class="space">
                         @if (!email.valid && email.touched || !email.valid && submitted){
                             <span>Please enter a correct Email address!</span>
                         }
                         </div>
-                        <input #email="ngModel" [(ngModel)]="currentContact.email" name="email" [placeholder]="currentTexte[6]"  required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                        <input #email="ngModel" [(ngModel)]="currentContact.email" name="email" [placeholder]="currentTexte[6]" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
                         <div class="space">
                         @if (!message.valid && message.touched || !message.valid && submitted){
