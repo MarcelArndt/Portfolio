@@ -52,6 +52,31 @@ form{
             animation: error-fade-in 0.75s, ease-in-out forwards;
             padding-bottom: 8px;
     }
+
+    .spanflow{
+        display: inline;
+        color: #00095B;
+        font-size: clamp(18px, 2vw, 21px);
+    }
+
+    .linkflow{
+        display: inline;
+        color:  #7E0EEE;
+        text-decoration: underline;
+        font-size: clamp(18px, 2vw, 21px);
+        &:hover{
+            cursor: pointer;
+            color:  #ffffff;
+        }
+    }
+}
+
+.flowBox{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    flex-direction: row-reverse;
+    margin-bottom: 64px;
 }
 
 
@@ -78,9 +103,6 @@ form{
     }
 
     .checkbox-Box{
-        margin-bottom: 56px;
-        height: 36px;
-        width: 100%;
         display: flex;
         flex-direction:row-reverse;
         justify-content:flex-end;
@@ -102,7 +124,7 @@ form{
         }
 
         label{
-            font-size: clamp(18px, 2vw, 21px);
+            font-size: clamp(16px, 2vw, 18px);
             padding-left: calc(32px + 8px);
         }
 
@@ -143,6 +165,15 @@ form{
             user-select: none;
             padding-left: 16px;
             font-size: 21px;
+        }
+
+        .labelText{
+            display: inline;
+            width: 100%;
+            span{
+                width: 100%;
+                display: inline;
+            }
         }
     }
 
@@ -437,6 +468,18 @@ form{
             color: rgb(184, 155, 155) !important;
             border-color: #483224  !important;
             cursor: not-allowed !important;
+        }
+    }
+
+    .spanflow{
+        color: #360303;
+    }
+
+    .linkflow{
+        color: $orange;
+        &:hover{
+            cursor: pointer;
+            color:  #ffffff;
         }
     }
 

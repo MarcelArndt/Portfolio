@@ -35,11 +35,12 @@ export class TranslationsService {
             projectOne: ['Project Join','Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.', 'JavaScript | HTML | CSS'],
             projectTwo: ['Phantom Forest','Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf der Heldin, im Kampf gegen böse Monster im nah gelegenden Wald', 'JavaScript | HTML | CSS | OOP'],
             projectThree: ['Pokédex','Basierend auf der PokéAPI - einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.', 'JavaScript | HTML | CSS | API'],
-            contact:['Kontakt','Sie haben ein Problem zu lösen?','Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen','Benötigen Sie einen Frontend-Entwickler?', 'Kontaktiere Sie Mich!', "Dein Name", "Deine E-Mail", "Deine Nachricht", "Nachricht senden", `ich akzeptiere den Datenschutz`],
-            footer:['Startseite','Impressum','Datenschutz'],
+            contact:['Kontakt','Sie haben ein Problem zu lösen?','Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen','Benötigen Sie einen Frontend-Entwickler?', 'Kontaktiere Sie Mich!', "Dein Name", "Deine E-Mail", "Deine Nachricht", "Nachricht senden", `Ich habe die `, `Datenschutzerklärung` ,` gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.`],
+            footer:['Startseite','Impressum','Daten<schutz'],
             impressum:[imprintText[0]],
             dataprotect:[dataProtectText[0]],
             succesEmail:['E-Mail erfolgreich versendet', 'Deine E-Mail ist auf dem Weg zu mir. Schön von dir zu hören. Ich werde so schnell wir mir möglich ist bei dir melden.', 'Email wurde nicht versendet!', 'Oh nein! Da lief wohl etwas schief. Bitte überprüfe nochmal deine Eingaben.', 'Fenster schließen'],
+            errorContact: ['Bitte gebe einen validen Namen ein!', 'Bitte gebe eine valide E-Mail ein!', 'Bitte gebe ein Text ein!', 'Bitte akzeptiere den Datenschutz!'],
     },
     english: {
       navigation:['About me','Skills','Projects','Contact'],
@@ -63,11 +64,12 @@ export class TranslationsService {
       projectOne: ['Project Join','Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.', 'JavaScript | HTML | CSS'],
       projectTwo: ['Phantom Forest','A simple Jump-and-Run game based on an object-oriented approach. Help your Hero to fight against any Evil in the nearest forest.', 'JavaScript | HTML | CSS | OOP'],
       projectThree: ['Pokédex','Based on the PokéAPI - A simple library that provides and catalogues pokemon information.', 'JavaScript | HTML | CSS | API'],
-      contact:['Contact','Got a problem to solve?','Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.', 'Need a Frontend developer?', 'Contact me!', "Your Name", "Your E-Mail", "Your Message", "Send Massage",`I accept the privacy policy.`],
+      contact:['Contact','Got a problem to solve?','Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.', 'Need a Frontend developer?', 'Contact me!', "Your Name", "Your E-Mail", "Your Message", "Send Massage",`I've read the `, `privacy policy`, ` and agree to the processing of my data as outlined.`],
       footer:['Home','Imprint', 'Data-Protection'],
       dataprotect:[dataProtectText[1]],
       impressum:[imprintText[1]],
       succesEmail:['E-Mail successfully Submitted', 'Your E-Mail is right on the way to me. Glad to hear from you. I am working hard for it to write your back as soon ans possible.', 'Email not Submitted!', 'Oh no! something went wrong. Please check your fields.', 'close Windows'],
+      errorContact: ['Please enter a correct name!', 'Please enter a correct Email address!', 'Please enter a Message!', 'Please read Data Protection!'],
     }
   }
 

@@ -1,6 +1,8 @@
 import { Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColorSwapService } from '../color-swap.service';
+import { TranslationsService } from '../translations.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-datenschutz',
@@ -10,7 +12,16 @@ import { ColorSwapService } from '../color-swap.service';
   styleUrl: './datenschutz.component.scss'
 })
 export class DatenschutzComponent {
-  constructor(public ThemeColor:ColorSwapService){}
+
+  public currentTexte:string[] = [];
+  private languageSubscription: Subscription;
+
+  constructor(public ThemeColor:ColorSwapService, public texte:TranslationsService){
+    this.languageSubscription = this.texte.currentLanguage.subscribe(lang => {
+      this.currentTexte = this.texte.getTexts(lang).dataprotect;
+    });
+  }
+  
   @Input() textContent: string = '';
   isLightboxOpen: boolean = false;
   isClosingAnimation:boolean = false;

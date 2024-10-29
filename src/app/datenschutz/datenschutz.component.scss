@@ -12,6 +12,7 @@
     align-items: center;
 }
 
+
 .closingButton{
     background-color: #E1E4E8;
     display: flex;
@@ -55,16 +56,7 @@
     max-height: 75dvh;
     overflow-Y: scroll;
     text-align: center;
-
-    h4{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 21px;
-        color: #7E0EEE;
-        margin-top: 24px;
-        margin-bottom: 32px;
-    }
+    
 }
 
 .hide{
@@ -86,6 +78,10 @@ h1{
   padding-bottom: 36px;
 }
 
+h4{
+    color: #7E0EEE !important;
+}
+
 h2{
     color: #7E0EEE;
 }
@@ -94,9 +90,12 @@ h2{
     padding-bottom: 48px;
 }
 
-
 .fadeOutBox{
     animation: fade-out 0.525s ease-in forwards;
+}
+
+.specialHeader{
+    font-size: clamp(18px, 3vw, 21px) !important;
 }
 
 @keyframes fade-out{
@@ -110,7 +109,6 @@ h2{
         opacity: 0;
     }
 }
-
 
 .fadeInBox{
     animation: fade-In 0.525s ease-in forwards;
@@ -127,7 +125,6 @@ h2{
         opacity: 1;
     }
 }
-
 
 
 .fadeContenIn{
@@ -164,6 +161,11 @@ h2{
     background-color: rgba($color: #140300, $alpha: 0.85);
     color: #360303;
 
+    h1{
+        color: #EE790E !important;
+    }
+
+
     .closingButton{
         color: #360303;
         background-color: #e8e1e1;
@@ -180,12 +182,9 @@ h2{
         border-color: #e8e1e1;;
     }
 
-
     div{
 
-        h1{
-            color: #EE790E;
-        }
+      
 
         h2{
             color: #EE790E;

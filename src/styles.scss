@@ -19,6 +19,7 @@ $orange: #EE790E;
     font-family: "Outfit";
     font-weight: 350;
     color: $baseTextColor;
+
 }
 
 ul{
@@ -424,7 +425,8 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 21px;
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 600;
     color: #7E0EEE;
     margin-top: 24px;
 }
@@ -437,7 +439,6 @@ h1{
 h4{
     margin-top: 48px;
     color: #7E0EEE;
-    font-size: 24px;
     margin-bottom: 8px;
 }
 
@@ -506,16 +507,100 @@ input:-webkit-autofill {
   background-color: #aaa;
 }
 
-.orangeScrollbar::-webkit-scrollbar-thumb {
+.orangeScrollbar::-webkit-scrollbar-thumb, .orangeContent::-webkit-scrollbar-thumb {
   background: #EE790E;
 }
 
-.blueScrollbar::-webkit-scrollbar-thumb {
+.blueScrollbar::-webkit-scrollbar-thumb, .blueContent::-webkit-scrollbar-thumb {
   background: #7E0EEE;
 }
 
-.blueScrollbar::-webkit-scrollbar {
+.blueScrollbar::-webkit-scrollbar{
   width: 12px;
   background-color: #aaa;
 }
 
+.blueContent::-webkit-scrollbar {
+  width: 12px;
+  background-color: #b8c1d1;
+}
+
+.orangeContent::-webkit-scrollbar{
+  width: 12px;
+  background-color: #d1c0b8;
+}
+
+
+.specialHeader{
+  font-size: clamp(21px, 3vw, 36px) !important;
+}
+
+.orangeContent{
+  background-color: #E8E1E1;
+  color: #360303 !important;
+
+  p{
+    color: #360303 !important;
+  }
+
+  ul{
+    color: #360303 !important;
+    li{
+      color: #360303 !important;
+    }
+  }
+
+  a{
+    color: #EE790E;
+    &:hover{
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  h1{
+    font-size: clamp(36px, 4vw, 88px);
+    margin-bottom: 2.5vw;
+  }
+
+  h1, h4{
+    color: #EE790E;
+    
+  }
+  
+  h4{
+    font-size: clamp(21px, 4vw, 56px);
+    font-weight: 500;
+    margin-bottom: 24px;
+    margin-top: 32px;
+  }
+ }
+
+ .blueContent{
+  color: #00095B;
+
+  h1{
+    font-size: clamp(24px, 4vw, 88px);
+    margin-bottom: 2.5vw;
+  }
+
+  h1, h4{
+    color:$violet;
+  }
+
+  a{
+    color:#7E0EEE;
+    &:hover{
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  h4{
+    font-size: clamp(18px, 4vw, 56px);
+    font-weight: 500;
+    margin-bottom: 24px;
+    margin-top: 32px;
+
+  }
+ }

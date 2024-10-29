@@ -1,5 +1,6 @@
 
 <app-success-submit #success></app-success-submit >
+<app-datenschutz #lightbox></app-datenschutz>
 <div id="contact" class="contact" tabindex="-1">
     <div class="bubble bottom right setIndex" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/contact/bubble-bottom-right.png"></div>
     <div class="contentContactwrapper">
@@ -17,38 +18,41 @@
 
                         <div class="space">
                         @if (!name.valid && name.touched || !name.valid && submitted){
-                            <span>Please enter a correct name!</span>
+                            <span  [innerHTML]="currentError[0]">Please enter a correct name!</span>
                         }
                         </div>
                         <input #name="ngModel" [(ngModel)]="currentContact.name" name="name" [placeholder]="currentTexte[5]"  required minlength="3" pattern="[A-Za-z._\-\s]+">
 
                         <div class="space">
                         @if (!email.valid && email.touched || !email.valid && submitted){
-                            <span>Please enter a correct Email address!</span>
+                            <span  [innerHTML]="currentError[1]">Please enter a correct Email address!</span>
                         }
                         </div>
                         <input #email="ngModel" [(ngModel)]="currentContact.email" name="email" [placeholder]="currentTexte[6]" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
                         <div class="space">
                         @if (!message.valid && message.touched || !message.valid && submitted){
-                            <span>Please enter a Message</span>
+                            <span  [innerHTML]="currentError[2]">Please enter a Message</span>
                         }
                         </div>
                         <textarea  #message="ngModel" [(ngModel)]="currentContact.text" name="text" [placeholder]="currentTexte[7]"  minlength="3" required></textarea>
 
                         <div class="space">
                             @if (!checkbox.valid && checkbox.touched || !checkbox.valid && submitted){
-                                <span>Please read Data Protection</span>
+                                <span  [innerHTML]="currentError[3]">Please read Data Protection</span>
                             }
                             </div>
+                    <div class="flowBox">
+                        <div class="labelText"><span class="spanflow" [innerHTML]="currentTexte[9]"></span><a class="linkflow" (click)="lightbox.openLightbox()" [innerHTML]="currentTexte[10]"></a><span class="spanflow" [innerHTML]="currentTexte[11]"></span></div>
                         <div class="checkbox-Box" >
-                            <label for="dataProtect" [innerHTML]="currentTexte[9]"></label><br>
+                            <label for="dataProtect"></label><br>
                             <div class="checkbox-container">
                                 <input class="originCheckbox" #checkbox="ngModel" type="checkbox"  name="dataProtect" required [(ngModel)]="dataProtect">
                                 <div class="customCheckBox"></div>
                             </div>
 
                         </div>
+                    </div>
                         <button class="button colorViolet" [innerHTML]="currentTexte[8]" [disabled]="ContactForm.invalid">Send Message</button>
                     </form>
                 </div>

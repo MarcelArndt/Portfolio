@@ -9,12 +9,13 @@ import { FooterComponent } from '../footer/footer.component';
 import { ColorSwapService } from '../color-swap.service';
 import { ImpressumComponent } from '../impressum/impressum.component';
 import { NavBarComponent } from '../hero-section/nav-bar/nav-bar.component';
+import { DatenschutzComponent } from '../datenschutz/datenschutz.component';
 
 
 @Component({
   selector: 'app-main-component',
   standalone: true,
-  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, CommonModule, ImpressumComponent, NavBarComponent ],
+  imports: [HeroSectionComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, CommonModule, ImpressumComponent, NavBarComponent, DatenschutzComponent ],
   templateUrl: './main-component.component.html',
   styleUrl: './main-component.component.scss'
 })
