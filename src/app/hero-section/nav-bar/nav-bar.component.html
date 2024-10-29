@@ -1,4 +1,4 @@
-<div class="NavbarWrapper " (click)="closeMenues()" [ngClass]="{'makeItSticky': isScrolled}">
+<div class="NavbarWrapper " (click)="closeMenues()" [ngClass]="{'makeItSticky': isScrolled, 'showNavBar': isScrollingUpwards && isScrolled, 'hideNavBar': !isScrollingUpwards && isScrolled,}">
     <div class="backgroundElement">
         <div class="bubble top right hideElement" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue, 'hideElement' : !isScrolled}"><img src="./assets/img/hero/hero-left-bubble-cyan.png"></div>
         <div class="bubble top left hideElement" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue, 'hideElement' : !isScrolled}"><img src="./assets/img/hero/hero-top-bubble-violet.png"></div>

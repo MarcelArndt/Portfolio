@@ -13,18 +13,22 @@ export class TranslationsService {
   text = {
     german: {
             navigation:['Über Mich','Skills','Projekte','Kontakt'],
-            headline:['Erstellen von nahtloser,<br>digitalen Erfahrungen.','Deutscher Frontend Entwickler<br>- Marcel Arndt -', `Trete in Kontakt`],
+            headline:['Erstellen von nahtlosen,<br>digitalen Erfahrungen.','Deutscher Frontend Entwickler<br>- Marcel Arndt -', `Kontaktiere mich`],
             aboutMe:['Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus Bad Salzuflen. Motiviert von den grenzenlosen Möglichkeiten in der IT bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.',
                      'Durch meine flexible Arbeitsweise bin ich in der Lage, sowohl vor Ort in Bad Salzuflen, Bielefeld und Umgebung als auch remote effizient zu arbeiten.',
                      'Ich bin aufgeschlossen und suche immer nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.',
                      'Programmieren ist mehr als nur Code schreiben – es ist kreative Problemlösung. Meine Aufgabe ist es, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln, um Ihre Ziele zu erreichen und Ihre Visionen zu verwirklichen.',
                      'Über mich',
+                     'Flexibilität',
+                     'Herausforderung',
+                     'Lösungsorientiert'
+
 
             ],
             skills:['Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.',
                     'Auf der Suche nach anderen Skills?',
                     'Nehmen Sie gerne Kontakt mit mir auf. Ich freue mich darauf, meine bisherigen Kenntnisse zu erweitern.',
-                    'In Kontakt kommen',
+                    'Kontaktiere mich',
                     'Meine Skills'
             ],
             portfolio:['Entdecken Sie hier eine Auswahl meiner Arbeiten -<br>interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.'],
@@ -45,8 +49,11 @@ export class TranslationsService {
                'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.',
                `In my profession, programming isn't just about writing code - it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.`,
               'About Me',
+              'Flexibility',
+              'Challenge',
+              'Solution-Focused'
               ],
-      skills:['My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.',
+      skills:['My journey has involved working on diverse<br>projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.',
               'Looking for another skill?',
               'Feel free to contact me. I look forward to expanding on my previous knowledge.',
               'Get in touch',

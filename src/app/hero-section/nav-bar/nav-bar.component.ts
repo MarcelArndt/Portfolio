@@ -36,6 +36,8 @@ export class NavBarComponent {
   hideMobilNavigation = true;
   setMobilOff = true;
   isScrolled = false;
+  isScrollingUpwards = false;
+  latestScrollPosition:number = 0;
 
 
   toogleMobilNav(){
@@ -135,12 +137,8 @@ export class NavBarComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    let currentScrollPosition = window.scrollY || 0;
-    if (currentScrollPosition > 100) {
-      this.isScrolled = true;
-    } else {
-      this.isScrolled = false;
-    }
+    this.isScrolled = window.scrollY > 100;
+    this.isScrollingUpwards =  this.latestScrollPosition < window.scrollY;
+    this.latestScrollPosition = window.scrollY;
   }
-  
 }

@@ -4,7 +4,7 @@
     <div class="bubble aboutMeBubleLeft left" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/hero-left-bubble-cyan.png"></div>
     <div class="PictureBorder" scrollAnimation animationClass="thisAnimationopacity"><div class="profilPicture" [ngClass]="{'orangeProfilBackground': !ThemeColor.currentColorIsBlue, 'blueProfilBackground': ThemeColor.currentColorIsBlue}"><img src="./assets/img/aboutme/person.png"></div></div>
     <div [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}" class="AboutMeWrapper noneopacity" scrollAnimation animationClass="thisAnimationOne">
-        <h3 [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}" [innerHTML]="currentTexte[4]">About Me</h3>
+        <h3 [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}" [innerHTML]="headline">About Me</h3>
         <div id="AboutMeText"><p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}">{{displayTextBox}}</p></div>
         <nav [ngClass]="{'orangeIconButtenAboutMe': !ThemeColor.currentColorIsBlue}" class="AboutMeMenuBar">
             <ul> 

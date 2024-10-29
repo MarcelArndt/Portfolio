@@ -30,11 +30,12 @@ export class AboutMeComponent {
   updateTexts(lang: 'german' | 'english') {
     const texts = this.texte.getTexts(lang).aboutMe;
     this.text = texts;
+    this.changeHeadline();
     this.displayTextBox = this.text[this.activeTextBoxIndex]; 
   }
 
-
   text:string[] = [];
+  headline:string = '';
   animationClass: string = 'AboutMeText';
   displayTextBox:string = this.text[0];
   activeTextBoxIndex:number = 0;
@@ -42,8 +43,19 @@ export class AboutMeComponent {
   enbaleTextBox(index: number){
     if(this.activeTextBoxIndex != index){
       this.activeTextBoxIndex = index;
+      this.changeHeadline();
       this.changeAnimation();
       this.displayTextBox = this.text[index];
+    }
+  }
+
+  changeHeadline(){
+    switch(this.activeTextBoxIndex){
+      case 0: this.headline = this.text[4]; break;
+      case 1: this.headline = this.text[5]; break;
+      case 2: this.headline = this.text[6]; break;
+      case 3: this.headline = this.text[7]; break;
+      default: this.headline = "About Me"; break;
     }
   }
 
