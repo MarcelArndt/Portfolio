@@ -36,7 +36,7 @@ export class TranslationsService {
             projectTwo: ['Phantom Forest','Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf der Heldin, im Kampf gegen böse Monster im nah gelegenden Wald', 'JavaScript | HTML | CSS | OOP'],
             projectThree: ['Pokédex','Basierend auf der PokéAPI - einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.', 'JavaScript | HTML | CSS | API'],
             contact:['Kontakt','Sie haben ein Problem zu lösen?','Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen','Benötigen Sie einen Frontend-Entwickler?', 'Kontaktiere Sie Mich!', "Dein Name", "Deine E-Mail", "Deine Nachricht", "Nachricht senden", `Ich habe die `, `Datenschutzerklärung` ,` gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.`],
-            footer:['Startseite','Impressum','Daten<schutz'],
+            footer:['Startseite','Impressum','Datenschutz'],
             impressum:[imprintText[0]],
             dataprotect:[dataProtectText[0]],
             succesEmail:['E-Mail erfolgreich versendet', 'Deine E-Mail ist auf dem Weg zu mir. Schön von dir zu hören. Ich werde so schnell wir mir möglich ist bei dir melden.', 'Email wurde nicht versendet!', 'Oh nein! Da lief wohl etwas schief. Bitte überprüfe nochmal deine Eingaben.', 'Fenster schließen'],
