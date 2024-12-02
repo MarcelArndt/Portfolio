@@ -22,8 +22,6 @@ export class TranslationsService {
                      'Flexibilität',
                      'Herausforderung',
                      'Lösungsorientiert'
-
-
             ],
             skills:['Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und -Konzepten eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.',
                     'Auf der Suche nach anderen Skills?',
@@ -35,7 +33,7 @@ export class TranslationsService {
             projectOne: ['Project Join','Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.', 'JavaScript | HTML | CSS'],
             projectTwo: ['Phantom Forest','Ein einfaches Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf der Heldin, im Kampf gegen böse Monster im nah gelegenden Wald', 'JavaScript | HTML | CSS | OOP'],
             projectThree: ['Pokédex','Basierend auf der PokéAPI - einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.', 'JavaScript | HTML | CSS | API'],
-            contact:['Kontakt','Sie haben ein Problem zu lösen?','Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen','Benötigen Sie einen Frontend-Entwickler?', 'Kontaktiere Sie Mich!', "Dein Name", "Deine E-Mail", "Deine Nachricht", "Nachricht senden", `Ich habe die `, `Datenschutzerklärung` ,` gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.`],
+            contact:['Kontakt','Sie haben ein Problem zu lösen?','Benötigen Sie einen Frontend-Entwickler?','Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen', 'Kontaktieren Sie mich.', "Dein Name", "Deine E-Mail", "Deine Nachricht", "Nachricht senden", `Ich habe die `, `Datenschutzerklärung` ,` gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.`],
             footer:['Startseite','Impressum','Datenschutz'],
             impressum:[imprintText[0]],
             dataprotect:[dataProtectText[0]],
@@ -64,7 +62,7 @@ export class TranslationsService {
       projectOne: ['Project Join','Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.', 'JavaScript | HTML | CSS'],
       projectTwo: ['Phantom Forest','A simple Jump-and-Run game based on an object-oriented approach. Help your Hero to fight against any Evil in the nearest forest.', 'JavaScript | HTML | CSS | OOP'],
       projectThree: ['Pokédex','Based on the PokéAPI - A simple library that provides and catalogues pokemon information.', 'JavaScript | HTML | CSS | API'],
-      contact:['Contact','Got a problem to solve?','Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.', 'Need a Frontend developer?', 'Contact me!', "Your Name", "Your E-Mail", "Your Message", "Send Massage",`I've read the `, `privacy policy`, ` and agree to the processing of my data as outlined.`],
+      contact:['Contact','Got a problem to solve?', 'Need a Frontend developer?', 'Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.', 'Contact me!', "Your Name", "Your E-Mail", "Your Message", "Send Massage",`I've read the `, `privacy policy`, ` and agree to the processing of my data as outlined.`],
       footer:['Home','Imprint', 'Data-Protection'],
       dataprotect:[dataProtectText[1]],
       impressum:[imprintText[1]],
