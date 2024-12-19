@@ -3,6 +3,16 @@ $baseTextColor:  #00095B;
 $violet: #7E0EEE;
 $orange: #EE790E;
 
+
+:root{
+    --background: #040a2e;
+    --black-text: 
+}
+
+:root.orange{
+    
+}
+
 @font-face {
     font-family: "Outfit";
     src: url("../public/assets/font/Outfit-VariableFont_wght.ttf") format("truetype");

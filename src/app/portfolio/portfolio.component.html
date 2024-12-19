@@ -1,69 +1,88 @@
 <section class="portfolio" id="portfolio">
-    <div class="bubble top set_index" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/portfolio/bubble-top.png"></div>
-    <div class="bubble left set_index" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/portfolio/bubble-two.png"></div>
-    <div class="bubble right set_index bubble_three" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/portfolio/bubble-three.png"></div>
-    <div class="bubble bottom left set_index bubble_four" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img src="./assets/img/portfolio/bubble-bottom.png"></div>
+    <div class="bubble top set_index" [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img
+            src="./assets/img/portfolio/bubble-top.png"></div>
+    <div class="bubble left set_index" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}"><img
+            src="./assets/img/portfolio/bubble-two.png"></div>
+    <div class="bubble right set_index bubble_three" [ngClass]="{'filterToPinkRed': !ThemeColor.currentColorIsBlue}">
+        <img src="./assets/img/portfolio/bubble-three.png"></div>
+    <div class="bubble bottom left set_index bubble_four"
+        [ngClass]="{'filterToYellow': !ThemeColor.currentColorIsBlue}"><img
+            src="./assets/img/portfolio/bubble-bottom.png"></div>
     <div class="portfolioWrapper set_infront">
         <div class="headlineWrapper" scrollAnimation animationClass="thisAnimationopacity">
             <h3 [ngClass]="{'orangeColor': !ThemeColor.currentColorIsBlue}">Portfolio</h3>
-            <p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}" [innerHTML]="currentTexte[0]">Explore a selection of my work here - Interact<br>with projects to see my skills in action.</p>
+            <p [ngClass]="{'orangeDarkText': !ThemeColor.currentColorIsBlue}" [innerHTML]="currentTexte[0]">Explore a
+                selection of my work here - Interact<br>with projects to see my skills in action.</p>
         </div>
 
         <div class="projectWrapper">
 
-        <div class="projectContainer"> 
-            <div class="PirctureVerticalWrapper " scrollAnimation animationClass="thisAnimationThree">
-                <div class="projectPircture">
-                    <img src="./assets/img/portfolio/project-1.png">
-                    <img class="position_one" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-1.png' : './assets/img/portfolio/shape-project-1-orange.png'">
+            <div class="projectContainer">
+                <div class="PirctureVerticalWrapper " scrollAnimation animationClass="thisAnimationThree">
+                    <div class="projectPircture">
+                        <img src="./assets/img/portfolio/project-1.png">
+                        <img class="position_one"
+                            [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-1.png' : './assets/img/portfolio/shape-project-1-orange.png'">
+                    </div>
                 </div>
-            </div> 
-            <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation animationClass="thisAnimationOne">
-                <h5 [innerHTML]="projectOne[0]"></h5>
-                <p [innerHTML]="projectOne[1]">Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</p>
-                <span [innerHTML]="projectOne[2]">JavaScript | HTML | CSS</span>
-                <div class="buttonContainer" scrollAnimation animationClass="thisAnimationTwo">
-                    <a href="https://arndt-marcel.de/join" target="_blank" class="button colorViolet">Live Demo</a> 
-                    <a class="button outlineButton" href="https://github.com/MarcelArndt/Project-Join" target="_blank">On GitHub</a>
+                <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation
+                    animationClass="thisAnimationOne">
+                    <h5 [innerHTML]="projectOne[0]"></h5>
+                    <p [innerHTML]="projectOne[1]">Task manager inspired by the Kanban System. Create and organize tasks
+                        using drag and drop functions, assign users and categories.</p>
+                    <span [innerHTML]="projectOne[2]">JavaScript | HTML | CSS</span>
+                    <div class="buttonContainer" scrollAnimation animationClass="thisAnimationTwo">
+                        <a href="https://arndt-marcel.de/join" target="_blank" class="button colorViolet">Live Demo</a>
+                        <a class="button outlineButton" href="https://github.com/MarcelArndt/Project-Join"
+                            target="_blank">On GitHub</a>
+                    </div>
                 </div>
-            </div> 
-        </div>
-
-        <div class="projectContainer odd">
-            <div class="PirctureVerticalWrapper" scrollAnimation animationClass="thisAnimationThree"> 
-                <div class="projectPircture">
-                    <img src="./assets/img/portfolio/project-2.png">
-                    <img class="position_two" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-2.png' : './assets/img/portfolio/shape-project-2-orange.png'">
-                </div> 
             </div>
-            <div class="projectText " [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation animationClass="thisAnimationOne">
-                <h5 [innerHTML]="projectTwo[0]">Phantom Forest</h5>
-                <p [innerHTML]="projectTwo[1]">A simple Jump-and-Run game based on an object-oriented approach. Help your Hero to fight against any Evil in the nearest forest.</p>
-                <span [innerHTML]="projectTwo[2]">JavaScript | HTML | CSS | OOP</span>
-                <div class="buttonContainer" scrollAnimation animationClass="thisAnimationTwo">
-                    <a href="https://arndt-marcel.de/phantom-forest" target="_blank" class="button colorViolet">Live Demo</a> 
-                    <a class="button outlineButton" href="https://github.com/MarcelArndt/Project-Platformer" target="_blank">On GitHub</a>
-                </div>
-            </div> 
-        </div>
 
-        <div class="projectContainer"> 
-            <div class="PirctureVerticalWrapper " scrollAnimation animationClass="thisAnimationThree">
-                <div class="projectPircture">
-                    <img src="./assets/img/portfolio/project-3.png">
-                    <img class="position_three" [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-3.png' : './assets/img/portfolio/shape-project-3-orange.png'">
-                </div> 
-            </div>
-            <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation animationClass="thisAnimationOne">
-                <h5 [innerHTML]="projectThree[0]">Pokédex</h5>
-                <p [innerHTML]="projectThree[1]">Based on the PokéAPI - A simple library that provides and catalogues pokemon information.</p>
-                <span [innerHTML]="projectThree[2]">JavaScript | HTML | CSS | API</span>
-                <div class="buttonContainer" scrollAnimation animationClass="thisAnimationTwo">
-                    <a href="https://arndt-marcel.de/pokedex" target="_blank"class="button colorViolet">Live Demo</a> 
-                    <a class="button outlineButton" href="https://github.com/MarcelArndt/Pokedex" target="_blank">On GitHub</a>
+            <div class="projectContainer odd">
+                <div class="PirctureVerticalWrapper" scrollAnimation animationClass="thisAnimationThree">
+                    <div class="projectPircture">
+                        <img src="./assets/img/portfolio/project-2.png">
+                        <img class="position_two"
+                            [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-2.png' : './assets/img/portfolio/shape-project-2-orange.png'">
+                    </div>
                 </div>
-            </div> 
+                <div class="projectText " [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation
+                    animationClass="thisAnimationOne">
+                    <h5 [innerHTML]="projectTwo[0]">Phantom Forest</h5>
+                    <p [innerHTML]="projectTwo[1]">A simple Jump-and-Run game based on an object-oriented approach. Help
+                        your Hero to fight against any Evil in the nearest forest.</p>
+                    <span [innerHTML]="projectTwo[2]">JavaScript | HTML | CSS | OOP</span>
+                    <div class="buttonContainer" scrollAnimation animationClass="thisAnimationTwo">
+                        <a href="https://arndt-marcel.de/phantom-forest" target="_blank" class="button colorViolet">Live
+                            Demo</a>
+                        <a class="button outlineButton" href="https://github.com/MarcelArndt/Project-Platformer"
+                            target="_blank">On GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projectContainer">
+                <div class="PirctureVerticalWrapper " scrollAnimation animationClass="thisAnimationThree">
+                    <div class="projectPircture">
+                        <img src="./assets/img/portfolio/project-3.png">
+                        <img class="position_three"
+                            [src]="ThemeColor.currentColorIsBlue ? './assets/img/portfolio/shape-project-3.png' : './assets/img/portfolio/shape-project-3-orange.png'">
+                    </div>
+                </div>
+                <div class="projectText" [ngClass]="{'orangeProject': !ThemeColor.currentColorIsBlue}" scrollAnimation
+                    animationClass="thisAnimationOne">
+                    <h5>{{projectThree[0]}}</h5>
+                    <p>{{projectThree[1]}}</p>
+                    <span>{{projectThree[2]}}</span>
+                    <div class="buttonContainer" scrollAnimation animationClass="thisAnimationTwo">
+                        <a href="https://arndt-marcel.de/dabubble" target="_blank" class="button colorViolet">Live
+                            Demo</a>
+                        <a class="button outlineButton" href="https://github.com/MarcelArndt/DABubble"
+                            target="_blank">On GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 </section>
